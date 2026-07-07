@@ -13,14 +13,15 @@ export class ApiError extends Error {
 }
 
 export function getAuthToken() {
-  return window.localStorage.getItem(AUTH_TOKEN_STORAGE_KEY)
+  return window.sessionStorage.getItem(AUTH_TOKEN_STORAGE_KEY)
 }
 
 export function setAuthToken(token: string | null) {
+  window.localStorage.removeItem(AUTH_TOKEN_STORAGE_KEY)
   if (token) {
-    window.localStorage.setItem(AUTH_TOKEN_STORAGE_KEY, token)
+    window.sessionStorage.setItem(AUTH_TOKEN_STORAGE_KEY, token)
   } else {
-    window.localStorage.removeItem(AUTH_TOKEN_STORAGE_KEY)
+    window.sessionStorage.removeItem(AUTH_TOKEN_STORAGE_KEY)
   }
 }
 
@@ -44,6 +45,7 @@ export async function apiFetch<T>(path: string, options: RequestInit = {}): Prom
     const payload = await response.json().catch(() => ({ message: '请求失败。' }))
     if (response.status === 401 && token) {
       setAuthToken(null)
+      window.sessionStorage.removeItem(AUTH_USER_STORAGE_KEY)
       window.localStorage.removeItem(AUTH_USER_STORAGE_KEY)
       window.dispatchEvent(new Event(AUTH_EXPIRED_EVENT))
     }

@@ -11,8 +11,9 @@ export type AuthUser = {
 }
 
 export function getStoredUser() {
+  window.localStorage.removeItem(AUTH_USER_STORAGE_KEY)
   try {
-    const raw = window.localStorage.getItem(AUTH_USER_STORAGE_KEY)
+    const raw = window.sessionStorage.getItem(AUTH_USER_STORAGE_KEY)
     return raw ? (JSON.parse(raw) as AuthUser) : null
   } catch {
     return null
@@ -20,10 +21,11 @@ export function getStoredUser() {
 }
 
 export function setStoredUser(user: AuthUser | null) {
+  window.localStorage.removeItem(AUTH_USER_STORAGE_KEY)
   if (user) {
-    window.localStorage.setItem(AUTH_USER_STORAGE_KEY, JSON.stringify(user))
+    window.sessionStorage.setItem(AUTH_USER_STORAGE_KEY, JSON.stringify(user))
   } else {
-    window.localStorage.removeItem(AUTH_USER_STORAGE_KEY)
+    window.sessionStorage.removeItem(AUTH_USER_STORAGE_KEY)
   }
 }
 
