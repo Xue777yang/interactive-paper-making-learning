@@ -12,15 +12,36 @@ import {
 } from './videoAnalytics.js'
 
 const PROCESS_STEP_COUNT = 10
+const TEACHER_DASHBOARD_CACHE_MS = 2 * 60 * 1000
+
+let teacherDashboardCache: { expiresAt: number; data: Awaited<ReturnType<typeof buildTeacherDashboardFresh>> } | null = null
+let teacherDashboardInFlight: Promise<Awaited<ReturnType<typeof buildTeacherDashboardFresh>>> | null = null
 
 export async function buildTeacherDashboard() {
-  const [students, questionAnalytics, knowledgeAnalytics, videoAnalytics, agentAnalytics] = await Promise.all([
-    safeAnalyticsPart('students', buildStudentRows(), []),
-    safeAnalyticsPart('questions', buildQuestionAnalytics(), []),
-    safeAnalyticsPart('knowledge', buildKnowledgeAnalytics(), []),
-    safeAnalyticsPart('video', buildVideoAnalytics(), emptyVideoAnalytics()),
-    safeAnalyticsPart('agent', buildAgentAnalytics(), emptyAgentAnalytics()),
+  const now = Date.now()
+  if (teacherDashboardCache && teacherDashboardCache.expiresAt > now) return teacherDashboardCache.data
+  if (teacherDashboardInFlight) return teacherDashboardInFlight
+
+  teacherDashboardInFlight = buildTeacherDashboardFresh()
+    .then((dashboard) => {
+      teacherDashboardCache = { data: dashboard, expiresAt: Date.now() + TEACHER_DASHBOARD_CACHE_MS }
+      return dashboard
+    })
+    .finally(() => {
+      teacherDashboardInFlight = null
+    })
+
+  return teacherDashboardInFlight
+}
+
+async function buildTeacherDashboardFresh() {
+  const [students, questionAnalytics, videoAnalytics, agentAnalytics] = await Promise.all([
+    safeAnalyticsPart('students', () => buildStudentRows(), []),
+    safeAnalyticsPart('questions', () => buildQuestionAnalytics(), []),
+    safeAnalyticsPart('video', () => buildVideoAnalytics(), emptyVideoAnalytics()),
+    safeAnalyticsPart('agent', () => buildAgentAnalytics(), emptyAgentAnalytics()),
   ])
+  const knowledgeAnalytics = await safeAnalyticsPart('knowledge', () => buildKnowledgeAnalytics(), [])
 
   const completedQuizStudents = students.filter((student) => student.quizCompleted).length
   const overview = {
@@ -592,9 +613,9 @@ export function parseMetadata<T>(value: string | null | undefined, fallback: T) 
   return safeJsonParse(value, fallback)
 }
 
-async function safeAnalyticsPart<T>(label: string, promise: Promise<T>, fallback: T): Promise<T> {
+async function safeAnalyticsPart<T>(label: string, task: () => Promise<T>, fallback: T): Promise<T> {
   try {
-    return await promise
+    return await task()
   } catch (error) {
     console.error(`Teacher dashboard ${label} analytics failed:`, error instanceof Error ? error.message : error)
     return fallback
