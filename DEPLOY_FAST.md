@@ -59,7 +59,7 @@ Render 页面操作：
 5. Build Command：
 
 ```bash
-corepack enable && pnpm install --frozen-lockfile && pnpm db:generate && pnpm build:server
+corepack enable && corepack prepare pnpm@9.15.9 --activate && pnpm install --frozen-lockfile && pnpm db:generate && pnpm build:server
 ```
 
 6. Start Command：
