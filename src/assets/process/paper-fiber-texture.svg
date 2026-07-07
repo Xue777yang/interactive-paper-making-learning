@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240" role="img" aria-label="Subtle handmade paper fiber texture">
+  <rect width="360" height="240" fill="#fff7df"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M12 34c32-9 54 8 84-1s48-19 82-9 70 21 124 2" stroke="#8b6f3f" stroke-opacity=".16" stroke-width="2"/>
+    <path d="M24 86c46 14 78-10 114-1 36 8 52 26 94 10 35-13 62-8 94 3" stroke="#5f8581" stroke-opacity=".12" stroke-width="1.6"/>
+    <path d="M8 148c30 8 49 2 76-8 45-17 70 18 112 9 48-11 84-26 142 3" stroke="#b8462d" stroke-opacity=".1" stroke-width="1.5"/>
+    <path d="M40 206c40-18 69-2 104-9 36-8 67-24 102-10s54 23 96 6" stroke="#31536d" stroke-opacity=".1" stroke-width="1.7"/>
+  </g>
+  <g fill="#6f6a47" opacity=".12">
+    <ellipse cx="58" cy="52" rx="18" ry="1.8" transform="rotate(-18 58 52)"/>
+    <ellipse cx="142" cy="42" rx="23" ry="1.6" transform="rotate(9 142 42)"/>
+    <ellipse cx="236" cy="74" rx="21" ry="1.8" transform="rotate(-24 236 74)"/>
+    <ellipse cx="316" cy="112" rx="24" ry="1.5" transform="rotate(16 316 112)"/>
+    <ellipse cx="84" cy="158" rx="22" ry="1.7" transform="rotate(28 84 158)"/>
+    <ellipse cx="188" cy="192" rx="28" ry="1.5" transform="rotate(-12 188 192)"/>
+    <ellipse cx="286" cy="198" rx="19" ry="1.8" transform="rotate(22 286 198)"/>
+  </g>
+</svg>

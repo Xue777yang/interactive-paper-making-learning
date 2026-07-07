@@ -1,0 +1,242 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Class {
+  id        String   @id @default(cuid())
+  name      String
+  grade     String
+  users     User[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("classes")
+}
+
+model User {
+  id                 String              @id @default(cuid())
+  username           String              @unique
+  displayName        String
+  passwordHash       String
+  role               String
+  classId            String?
+  class              Class?              @relation(fields: [classId], references: [id])
+  createdQuestions   Question[]
+  quizSessions       QuizSession[]
+  answerRecords      AnswerRecord[]
+  agentConversations AgentConversation[]
+  agentMessages      AgentMessage[]
+  emotionAnalyses    EmotionAnalysis[]
+  videoEvents        VideoEvent[]
+  processEvents      ProcessEvent[]
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+}
+
+model KnowledgeTag {
+  id              String                 @id @default(cuid())
+  code            String                 @unique
+  name            String
+  description     String
+  color           String
+  parentId        String?
+  parent          KnowledgeTag?          @relation("KnowledgeTagTree", fields: [parentId], references: [id])
+  children        KnowledgeTag[]         @relation("KnowledgeTagTree")
+  orderIndex      Int                    @default(0)
+  active          Boolean                @default(true)
+  questionTags    QuestionKnowledgeTag[]
+  videoMarkers    VideoKnowledgeMarker[]
+  createdAt       DateTime               @default(now())
+  updatedAt       DateTime               @updatedAt
+}
+
+model Question {
+  id            String                 @id
+  stem          String
+  optionA       String
+  optionB       String
+  optionC       String
+  optionD       String
+  answerIndex   Int
+  explanation   String
+  difficulty    Int
+  active        Boolean                @default(true)
+  createdById   String?
+  createdBy     User?                  @relation(fields: [createdById], references: [id], onDelete: SetNull)
+  tags          QuestionKnowledgeTag[]
+  answerRecords AnswerRecord[]
+  createdAt     DateTime               @default(now())
+  updatedAt     DateTime               @updatedAt
+}
+
+model QuestionKnowledgeTag {
+  questionId     String
+  knowledgeTagId String
+  question       Question     @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  knowledgeTag   KnowledgeTag @relation(fields: [knowledgeTagId], references: [id], onDelete: Cascade)
+
+  @@id([questionId, knowledgeTagId])
+}
+
+model QuizSession {
+  id             String              @id @default(cuid())
+  userId         String
+  user           User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  startedAt      DateTime            @default(now())
+  completedAt    DateTime?
+  totalQuestions Int                 @default(20)
+  correctCount   Int                 @default(0)
+  helpUsed       Int                 @default(0)
+  averageTimeMs  Float               @default(0)
+  finalAbility   Float               @default(3)
+  answerRecords  AnswerRecord[]
+  conversations  AgentConversation[]
+  createdAt      DateTime            @default(now())
+}
+
+model AnswerRecord {
+  id              String      @id @default(cuid())
+  quizSessionId   String
+  quizSession     QuizSession @relation(fields: [quizSessionId], references: [id], onDelete: Cascade)
+  userId          String
+  user            User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId      String
+  question        Question    @relation(fields: [questionId], references: [id])
+  selectedIndex   Int
+  correct         Boolean
+  timeSpentMs     Int
+  usedAgentHelp   Boolean     @default(false)
+  difficulty      Int
+  createdAt       DateTime    @default(now())
+}
+
+model AgentConversation {
+  id          String           @id @default(cuid())
+  userId      String
+  user        User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  quizSessionId String?
+  quizSession QuizSession?     @relation(fields: [quizSessionId], references: [id], onDelete: SetNull)
+  questionId  String?
+  contextType String            @default("general")
+  messages    AgentMessage[]
+  startedAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+}
+
+model AgentMessage {
+  id                String            @id @default(cuid())
+  conversationId    String
+  conversation      AgentConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  userId            String
+  user              User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role              String
+  content           String
+  relatedQuestionId String?
+  relatedVideoTime  Float?
+  emotionAnalysis   EmotionAnalysis?
+  createdAt         DateTime          @default(now())
+}
+
+model EmotionAnalysis {
+  id             String       @id @default(cuid())
+  agentMessageId String       @unique
+  agentMessage   AgentMessage @relation(fields: [agentMessageId], references: [id], onDelete: Cascade)
+  userId         String
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  emotionLabel   String
+  valence        Float
+  arousal        Float
+  confidence     Float
+  summary        String
+  riskLevel      String
+  createdAt      DateTime     @default(now())
+}
+
+model VideoResource {
+  id          String                 @id @default(cuid())
+  title       String
+  description String
+  src         String
+  poster      String?
+  duration    Float
+  active      Boolean                @default(true)
+  markers     VideoKnowledgeMarker[]
+  events      VideoEvent[]
+  summaries   VideoWatchSummary[]
+  createdAt   DateTime               @default(now())
+  updatedAt   DateTime               @updatedAt
+}
+
+model VideoKnowledgeMarker {
+  id             String         @id @default(cuid())
+  videoId        String
+  video          VideoResource  @relation(fields: [videoId], references: [id], onDelete: Cascade)
+  knowledgeTagId String
+  knowledgeTag   KnowledgeTag   @relation(fields: [knowledgeTagId], references: [id])
+  label          String
+  startTime      Float
+  endTime        Float
+  color          String
+  description    String
+  orderIndex     Int            @default(0)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+}
+
+model VideoEvent {
+  id             String         @id @default(cuid())
+  userId         String
+  user           User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  videoId        String
+  video          VideoResource  @relation(fields: [videoId], references: [id], onDelete: Cascade)
+  eventType      String
+  videoTime      Float
+  fromTime       Float?
+  toTime         Float?
+  playbackRate   Float?
+  watchedDeltaMs Int?
+  metadata       String?
+  createdAt      DateTime       @default(now())
+
+  @@index([userId, videoId, createdAt])
+}
+
+model VideoWatchSummary {
+  id                   String        @id @default(cuid())
+  userId               String
+  videoId              String
+  video                VideoResource @relation(fields: [videoId], references: [id], onDelete: Cascade)
+  totalWatchTimeMs     Int           @default(0)
+  effectiveWatchTimeMs Int           @default(0)
+  completionRate       Float         @default(0)
+  replaySegments       String        @default("[]")
+  mostReplayedMarkers  String        @default("[]")
+  skippedMarkers       String        @default("[]")
+  lastPosition         Float         @default(0)
+  updatedAt            DateTime      @updatedAt
+
+  @@unique([userId, videoId])
+}
+
+model ProcessEvent {
+  id               String   @id @default(cuid())
+  userId           String
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  stepId           String
+  eventType        String
+  progress         Float?
+  completed        Boolean  @default(false)
+  timeSpentMs      Int?
+  interactionCount Int?
+  knowledgePoints  String
+  metadata         String?
+  createdAt        DateTime @default(now())
+
+  @@index([userId, stepId, createdAt])
+}

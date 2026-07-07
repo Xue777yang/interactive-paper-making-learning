@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="160" viewBox="0 0 220 160" role="img" aria-label="Bamboo basket weave texture">
+  <rect width="220" height="160" fill="#c89748"/>
+  <g opacity=".56">
+    <path d="M0 16h220M0 48h220M0 80h220M0 112h220M0 144h220" stroke="#7d4f25" stroke-width="9"/>
+    <path d="M18 0v160M54 0v160M90 0v160M126 0v160M162 0v160M198 0v160" stroke="#f1ca76" stroke-width="12"/>
+  </g>
+  <g opacity=".3">
+    <path d="M0 0l220 160M-60 0l220 160M60 0l220 160" stroke="#6d401d" stroke-width="5"/>
+    <path d="M220 0L0 160M280 0L60 160M160 0l-220 160" stroke="#f7d98b" stroke-width="4"/>
+  </g>
+</svg>

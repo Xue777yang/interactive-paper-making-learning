@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="260" viewBox="0 0 420 260" role="img" aria-label="Light ink wash stage atmosphere">
+  <rect width="420" height="260" fill="none"/>
+  <g fill="#31536d">
+    <ellipse cx="72" cy="76" rx="72" ry="24" opacity=".08"/>
+    <ellipse cx="300" cy="64" rx="92" ry="28" opacity=".07"/>
+    <ellipse cx="212" cy="188" rx="130" ry="34" opacity=".06"/>
+  </g>
+  <g fill="#b8462d">
+    <ellipse cx="360" cy="152" rx="38" ry="12" opacity=".06"/>
+    <ellipse cx="118" cy="210" rx="54" ry="14" opacity=".045"/>
+  </g>
+</svg>

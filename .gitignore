@@ -1,0 +1,47 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-server
+dist-ssr
+classpulse
+digital-english-tutor
+process-assets
+process-assets-fixed
+process-assets-v2
+process-assets*.zip
+*.local
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+!.env.production.example
+prisma/dev.db
+prisma/dev.db-journal
+
+# Large course videos should use an external URL when they exceed 100MB.
+public/videos/*.mp4
+public/videos/*.webm
+public/videos/*.mov
+public/videos/*.m4v
+!public/videos/README.md
+!public/videos/*.webp
+!public/videos/*.vtt
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
