@@ -78,6 +78,7 @@ pnpm start:server
 
 ```env
 NODE_ENV=production
+NODE_VERSION=22
 PORT=10000
 DATABASE_URL=<Supabase pooled 或普通 PostgreSQL 连接串>
 DIRECT_URL=<Supabase direct PostgreSQL 连接串>
