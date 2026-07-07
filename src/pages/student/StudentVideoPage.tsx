@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ArrowLeft, PlayCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { apiFetch } from '../../lib/apiClient'
 import type { VideoDto } from '../../lib/analyticsTypes'
 import { LearningVideoPlayer } from '../../components/video/LearningVideoPlayer'
@@ -7,16 +8,33 @@ import { LearningVideoPlayer } from '../../components/video/LearningVideoPlayer'
 export function StudentVideoPage() {
   const [video, setVideo] = useState<VideoDto | null>(null)
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
   const [started, setStarted] = useState(false)
 
   useEffect(() => {
+    setError('')
     apiFetch<{ videos: VideoDto[] }>('/videos')
       .then((response) => setVideo(response.videos[0] ?? null))
+      .catch((nextError: unknown) => {
+        setError(nextError instanceof Error ? nextError.message : '视频资源加载失败。')
+      })
       .finally(() => setLoading(false))
   }, [])
 
   if (loading) {
     return <section className="paper-panel">正在加载微课视频...</section>
+  }
+
+  if (error) {
+    return (
+      <section className="paper-panel">
+        <h1>视频加载失败</h1>
+        <p>{error}</p>
+        <Link className="primary-button" to="/login">
+          重新登录
+        </Link>
+      </section>
+    )
   }
 
   if (!video) {
