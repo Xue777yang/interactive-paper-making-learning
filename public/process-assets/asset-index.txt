@@ -1,0 +1,118 @@
+Stage 01 - history-origin
+  01. props/stage01-oracle-bone.png
+  02. props/stage01-bamboo-slip.png
+  03. props/stage01-silk-scroll.png
+  04. papers/stage01-paper-stack-and-sheets.png
+  05. papers/stage01-framed-paper-sheet.png
+
+Stage 02 - raw-materials
+  01. props/stage02-cai-lun.png
+  02. props/stage02-hemp-fiber-bundle.png
+  03. props/stage02-bark-bundle.png
+  04. props/stage02-rag-cloth-pile.png
+  05. props/stage02-fishing-net.png
+
+Stage 03 - cutting-and-sorting
+  01. tools/stage03-cutting-knife.png
+  02. props/stage03-rectangular-water-vat.png
+  03. tools/stage03-wooden-work-board.png
+  04. icons/stage03-bamboo-fiber-diagram.png
+  05. props/stage03-bamboo-strips.png
+  06. props/stage03-cotton-fiber-ball.png
+  07. props/stage03-separated-fibers.png
+
+Stage 04 - steaming-and-washing
+  01. tools/stage04-boiling-cauldron.png
+  02. tools/stage04-stone-stove.png
+  03. effects/stage04-steam-cloud.png
+  04. effects/stage04-fire-flame.png
+  05. effects/stage04-bubble-small.png
+  06. effects/stage04-bubble-large.png
+  07. props/stage04-boiled-fiber-pot.png
+  08. props/stage04-softened-fiber-basket.png
+  09. props/stage04-impurity-twigs.png
+  10. props/stage04-bark-chips.png
+  11. props/stage04-sand-pile.png
+  12. props/stage04-stone-grit.png
+
+Stage 05 - pulping
+  01. tools/stage05-wooden-mallet.png
+  02. tools/stage05-stone-mortar.png
+  03. props/stage05-fiber-block.png
+  04. props/stage05-crushed-fiber-block.png
+  05. props/stage05-pulp-vat.png
+  06. effects/stage05-floating-fibers-a.png
+  07. effects/stage05-floating-fibers-b.png
+  08. effects/stage05-pulp-fragments.png
+  09. effects/stage05-water-splash.png
+
+Stage 06 - sheet-forming
+  01. props/stage06-water-vat-top.png
+  02. tools/stage06-bamboo-screen-front.png
+  03. tools/stage06-bamboo-screen-tilted.png
+  04. effects/stage06-water-wash.png
+  05. effects/stage06-water-ripple-large.png
+  06. papers/stage06-wet-fiber-mat-on-frame.png
+  07. papers/stage06-wet-paper-sheet.png
+  08. effects/stage06-water-ripple-small.png
+  09. effects/stage06-water-splash-ripple.png
+  10. effects/stage06-water-drops-left.png
+  11. effects/stage06-floating-fiber-petals.png
+  12. effects/stage06-water-drops-right.png
+
+Stage 07 - pressing-and-drying
+  01. props/stage07-drying-wall-panel.png
+  02. tools/stage07-bamboo-drying-rack.png
+  03. papers/stage07-wet-paper-sheet.png
+  04. papers/stage07-half-dry-paper-sheet.png
+  05. papers/stage07-dry-paper-sheet.png
+  06. effects/stage07-sunlight-beam.png
+  07. effects/stage07-wind-streaks-a.png
+  08. effects/stage07-steam-haze.png
+  09. effects/stage07-wind-leaves-a.png
+  10. effects/stage07-wind-streaks-b.png
+  11. effects/stage07-wind-leaves-b.png
+
+Stage 08 - finishing-and-cutting
+  01. papers/stage08-single-finished-paper.png
+  02. papers/stage08-stacked-finished-paper.png
+  03. tools/stage08-paper-cutting-knife.png
+  04. icons/stage08-process-icon-bamboo.png
+  05. icons/stage08-process-icon-soak.png
+  06. icons/stage08-process-icon-forming.png
+  07. icons/stage08-process-icon-sun-dry.png
+  08. icons/stage08-process-icon-stack.png
+  09. icons/stage08-fiber-weave-diagram.png
+  10. tools/stage08-large-wooden-table.png
+
+Stage 09 - modern-recycling
+  01. props/stage09-waste-paper-pile.png
+  02. props/stage09-shredded-paper-pile.png
+  03. props/stage09-recycle-bin.png
+  04. papers/stage09-recycled-paper-stack-clean.png
+  05. papers/stage09-recycled-paper-stack-speckled.png
+  06. tools/stage09-water-filter-machine.png
+  07. tools/stage09-water-treatment-pond.png
+  08. tools/stage09-greenhouse-paper-line.png
+  09. tools/stage09-robotic-arm.png
+  10. icons/stage09-control-panel.png
+  11. icons/stage09-sensor-leaf.png
+  12. icons/stage09-sensor-thermometer.png
+  13. icons/stage09-sensor-wifi.png
+  14. icons/stage09-sensor-water.png
+
+Stage 10 - paper-culture
+  01. props/stage10-book-blue-bound.png
+  02. props/stage10-book-dark-blue.png
+  03. props/stage10-book-kraft-bound.png
+  04. papers/stage10-scroll-bamboo-painting.png
+  05. papers/stage10-scroll-landscape.png
+  06. papers/stage10-scroll-plum-blossom.png
+  07. papers/stage10-scroll-blank.png
+  08. papers/stage10-final-paper-stack.png
+  09. papers/stage10-rolled-paper-scroll.png
+  10. papers/stage10-single-handmade-sheet.png
+  11. effects/stage10-ink-cloud.png
+  12. effects/stage10-golden-light-sweep.png
+  13. effects/stage10-blue-water-splash.png
+  14. props/stage10-bamboo-decoration.png

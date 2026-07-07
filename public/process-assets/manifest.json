@@ -1,0 +1,2606 @@
+{
+  "name": "papermaking-process-assets-fixed",
+  "description": "Backgrounds preserved from the previous asset directory; transparent components regenerated from process-assets/fix/stage1-stage10.png.",
+  "generatedFrom": {
+    "backgrounds": "D:/summercamp/process-assets/backgrounds",
+    "components": "D:/summercamp/process-assets/fix/stage*.png"
+  },
+  "alphaThreshold": 10,
+  "componentPaddingPx": 24,
+  "assetCount": 111,
+  "backgroundCount": 12,
+  "componentCount": 99,
+  "categories": {
+    "backgrounds": 12,
+    "props": 30,
+    "tools": 15,
+    "papers": 18,
+    "effects": 24,
+    "icons": 12
+  },
+  "assets": [
+    {
+      "id": "bg-ancient-workshop",
+      "type": "background",
+      "category": "backgrounds",
+      "file": "backgrounds/bg-ancient-workshop.webp",
+      "width": 1190,
+      "height": 610,
+      "source": "process-assets/backgrounds (preserved)"
+    },
+    {
+      "id": "bg-cutting-table",
+      "type": "background",
+      "category": "backgrounds",
+      "file": "backgrounds/bg-cutting-table.webp",
+      "width": 960,
+      "height": 560,
+      "source": "process-assets/backgrounds (preserved)"
+    },
+    {
+      "id": "bg-drying-wall",
+      "type": "background",
+      "category": "backgrounds",
+      "file": "backgrounds/bg-drying-wall.webp",
+      "width": 520,
+      "height": 200,
+      "source": "process-assets/backgrounds (preserved)"
+    },
+    {
+      "id": "bg-drying-yard",
+      "type": "background",
+      "category": "backgrounds",
+      "file": "backgrounds/bg-drying-yard.webp",
+      "width": 1055,
+      "height": 610,
+      "source": "process-assets/backgrounds (preserved)"
+    },
+    {
+      "id": "bg-eco-paper-mill",
+      "type": "background",
+      "category": "backgrounds",
+      "file": "backgrounds/bg-eco-paper-mill.webp",
+      "width": 1130,
+      "height": 610,
+      "source": "process-assets/backgrounds (preserved)"
+    },
+    {
+      "id": "bg-history-timeline",
+      "type": "background",
+      "category": "backgrounds",
+      "file": "backgrounds/bg-history-timeline.webp",
+      "width": 1080,
+      "height": 640,
+      "source": "process-assets/backgrounds (preserved)"
+    },
+    {
+      "id": "bg-preparation-table",
+      "type": "background",
+      "category": "backgrounds",
+      "file": "backgrounds/bg-preparation-table.webp",
+      "width": 1080,
+      "height": 610,
+      "source": "process-assets/backgrounds (preserved)"
+    },
+    {
+      "id": "bg-pulping-table",
+      "type": "background",
+      "category": "backgrounds",
+      "file": "backgrounds/bg-pulping-table.webp",
+      "width": 1100,
+      "height": 610,
+      "source": "process-assets/backgrounds (preserved)"
+    },
+    {
+      "id": "bg-sheet-forming-vat",
+      "type": "background",
+      "category": "backgrounds",
+      "file": "backgrounds/bg-sheet-forming-vat.webp",
+      "width": 1100,
+      "height": 620,
+      "source": "process-assets/backgrounds (preserved)"
+    },
+    {
+      "id": "bg-smart-paper-factory",
+      "type": "background",
+      "category": "backgrounds",
+      "file": "backgrounds/bg-smart-paper-factory.webp",
+      "width": 1130,
+      "height": 610,
+      "source": "process-assets/backgrounds (preserved)"
+    },
+    {
+      "id": "bg-steaming-stove",
+      "type": "background",
+      "category": "backgrounds",
+      "file": "backgrounds/bg-steaming-stove.webp",
+      "width": 1080,
+      "height": 620,
+      "source": "process-assets/backgrounds (preserved)"
+    },
+    {
+      "id": "bg-tradition-to-future",
+      "type": "background",
+      "category": "backgrounds",
+      "file": "backgrounds/bg-tradition-to-future.webp",
+      "width": 1170,
+      "height": 600,
+      "source": "process-assets/backgrounds (preserved)"
+    },
+    {
+      "id": "stage01-oracle-bone",
+      "stage": 1,
+      "stageTitle": "history-origin",
+      "indexInStage": 1,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage01-oracle-bone.png",
+      "width": 185,
+      "height": 276,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 137,
+        "height": 228
+      },
+      "sourceStageSheet": "source-stage-sheets/stage1.png",
+      "sourceBox": {
+        "x": 656,
+        "y": 208,
+        "width": 137,
+        "height": 228
+      },
+      "alphaArea": 21364
+    },
+    {
+      "id": "stage01-bamboo-slip",
+      "stage": 1,
+      "stageTitle": "history-origin",
+      "indexInStage": 2,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage01-bamboo-slip.png",
+      "width": 166,
+      "height": 263,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 118,
+        "height": 215
+      },
+      "sourceStageSheet": "source-stage-sheets/stage1.png",
+      "sourceBox": {
+        "x": 831,
+        "y": 214,
+        "width": 118,
+        "height": 215
+      },
+      "alphaArea": 19812
+    },
+    {
+      "id": "stage01-silk-scroll",
+      "stage": 1,
+      "stageTitle": "history-origin",
+      "indexInStage": 3,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage01-silk-scroll.png",
+      "width": 283,
+      "height": 238,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 235,
+        "height": 190
+      },
+      "sourceStageSheet": "source-stage-sheets/stage1.png",
+      "sourceBox": {
+        "x": 960,
+        "y": 224,
+        "width": 235,
+        "height": 190
+      },
+      "alphaArea": 31331
+    },
+    {
+      "id": "stage01-paper-stack-and-sheets",
+      "stage": 1,
+      "stageTitle": "history-origin",
+      "indexInStage": 4,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage01-paper-stack-and-sheets.png",
+      "width": 386,
+      "height": 301,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 338,
+        "height": 253
+      },
+      "sourceStageSheet": "source-stage-sheets/stage1.png",
+      "sourceBox": {
+        "x": 633,
+        "y": 509,
+        "width": 338,
+        "height": 253
+      },
+      "alphaArea": 55303
+    },
+    {
+      "id": "stage01-framed-paper-sheet",
+      "stage": 1,
+      "stageTitle": "history-origin",
+      "indexInStage": 5,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage01-framed-paper-sheet.png",
+      "width": 254,
+      "height": 275,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 206,
+        "height": 227
+      },
+      "sourceStageSheet": "source-stage-sheets/stage1.png",
+      "sourceBox": {
+        "x": 991,
+        "y": 524,
+        "width": 206,
+        "height": 227
+      },
+      "alphaArea": 32658
+    },
+    {
+      "id": "stage02-cai-lun",
+      "stage": 2,
+      "stageTitle": "raw-materials",
+      "indexInStage": 1,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage02-cai-lun.png",
+      "width": 445,
+      "height": 514,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 397,
+        "height": 466
+      },
+      "sourceStageSheet": "source-stage-sheets/stage2.png",
+      "sourceBox": {
+        "x": 1213,
+        "y": 37,
+        "width": 397,
+        "height": 466
+      },
+      "alphaArea": 106183
+    },
+    {
+      "id": "stage02-hemp-fiber-bundle",
+      "stage": 2,
+      "stageTitle": "raw-materials",
+      "indexInStage": 2,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage02-hemp-fiber-bundle.png",
+      "width": 230,
+      "height": 196,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 182,
+        "height": 148
+      },
+      "sourceStageSheet": "source-stage-sheets/stage2.png",
+      "sourceBox": {
+        "x": 1422,
+        "y": 521,
+        "width": 182,
+        "height": 148
+      },
+      "alphaArea": 21053
+    },
+    {
+      "id": "stage02-bark-bundle",
+      "stage": 2,
+      "stageTitle": "raw-materials",
+      "indexInStage": 3,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage02-bark-bundle.png",
+      "width": 183,
+      "height": 180,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 135,
+        "height": 132
+      },
+      "sourceStageSheet": "source-stage-sheets/stage2.png",
+      "sourceBox": {
+        "x": 1243,
+        "y": 522,
+        "width": 135,
+        "height": 132
+      },
+      "alphaArea": 10409
+    },
+    {
+      "id": "stage02-rag-cloth-pile",
+      "stage": 2,
+      "stageTitle": "raw-materials",
+      "indexInStage": 4,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage02-rag-cloth-pile.png",
+      "width": 225,
+      "height": 207,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 177,
+        "height": 159
+      },
+      "sourceStageSheet": "source-stage-sheets/stage2.png",
+      "sourceBox": {
+        "x": 1224,
+        "y": 697,
+        "width": 177,
+        "height": 159
+      },
+      "alphaArea": 21128
+    },
+    {
+      "id": "stage02-fishing-net",
+      "stage": 2,
+      "stageTitle": "raw-materials",
+      "indexInStage": 5,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage02-fishing-net.png",
+      "width": 260,
+      "height": 221,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 212,
+        "height": 173
+      },
+      "sourceStageSheet": "source-stage-sheets/stage2.png",
+      "sourceBox": {
+        "x": 1422,
+        "y": 699,
+        "width": 212,
+        "height": 173
+      },
+      "alphaArea": 25397
+    },
+    {
+      "id": "stage03-cutting-knife",
+      "stage": 3,
+      "stageTitle": "cutting-and-sorting",
+      "indexInStage": 1,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage03-cutting-knife.png",
+      "width": 286,
+      "height": 282,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 238,
+        "height": 234
+      },
+      "sourceStageSheet": "source-stage-sheets/stage3.png",
+      "sourceBox": {
+        "x": 1381,
+        "y": 393,
+        "width": 238,
+        "height": 234
+      },
+      "alphaArea": 21594
+    },
+    {
+      "id": "stage03-rectangular-water-vat",
+      "stage": 3,
+      "stageTitle": "cutting-and-sorting",
+      "indexInStage": 2,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage03-rectangular-water-vat.png",
+      "width": 439,
+      "height": 307,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 391,
+        "height": 259
+      },
+      "sourceStageSheet": "source-stage-sheets/stage3.png",
+      "sourceBox": {
+        "x": 497,
+        "y": 637,
+        "width": 391,
+        "height": 259
+      },
+      "alphaArea": 55108
+    },
+    {
+      "id": "stage03-wooden-work-board",
+      "stage": 3,
+      "stageTitle": "cutting-and-sorting",
+      "indexInStage": 3,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage03-wooden-work-board.png",
+      "width": 463,
+      "height": 270,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 415,
+        "height": 222
+      },
+      "sourceStageSheet": "source-stage-sheets/stage3.png",
+      "sourceBox": {
+        "x": 31,
+        "y": 667,
+        "width": 415,
+        "height": 222
+      },
+      "alphaArea": 53577
+    },
+    {
+      "id": "stage03-bamboo-fiber-diagram",
+      "stage": 3,
+      "stageTitle": "cutting-and-sorting",
+      "indexInStage": 4,
+      "type": "component",
+      "category": "icons",
+      "file": "icons/stage03-bamboo-fiber-diagram.png",
+      "width": 249,
+      "height": 247,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 201,
+        "height": 199
+      },
+      "sourceStageSheet": "source-stage-sheets/stage3.png",
+      "sourceBox": {
+        "x": 929,
+        "y": 685,
+        "width": 201,
+        "height": 199
+      },
+      "alphaArea": 30911
+    },
+    {
+      "id": "stage03-bamboo-strips",
+      "stage": 3,
+      "stageTitle": "cutting-and-sorting",
+      "indexInStage": 5,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage03-bamboo-strips.png",
+      "width": 154,
+      "height": 225,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 106,
+        "height": 177
+      },
+      "sourceStageSheet": "source-stage-sheets/stage3.png",
+      "sourceBox": {
+        "x": 1164,
+        "y": 700,
+        "width": 106,
+        "height": 177
+      },
+      "alphaArea": 10282
+    },
+    {
+      "id": "stage03-cotton-fiber-ball",
+      "stage": 3,
+      "stageTitle": "cutting-and-sorting",
+      "indexInStage": 6,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage03-cotton-fiber-ball.png",
+      "width": 228,
+      "height": 206,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 180,
+        "height": 158
+      },
+      "sourceStageSheet": "source-stage-sheets/stage3.png",
+      "sourceBox": {
+        "x": 1464,
+        "y": 712,
+        "width": 180,
+        "height": 158
+      },
+      "alphaArea": 21426
+    },
+    {
+      "id": "stage03-separated-fibers",
+      "stage": 3,
+      "stageTitle": "cutting-and-sorting",
+      "indexInStage": 7,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage03-separated-fibers.png",
+      "width": 159,
+      "height": 199,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 111,
+        "height": 151
+      },
+      "sourceStageSheet": "source-stage-sheets/stage3.png",
+      "sourceBox": {
+        "x": 1312,
+        "y": 720,
+        "width": 111,
+        "height": 151
+      },
+      "alphaArea": 10099
+    },
+    {
+      "id": "stage04-boiling-cauldron",
+      "stage": 4,
+      "stageTitle": "steaming-and-washing",
+      "indexInStage": 1,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage04-boiling-cauldron.png",
+      "width": 316,
+      "height": 335,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 268,
+        "height": 287
+      },
+      "sourceStageSheet": "source-stage-sheets/stage4.png",
+      "sourceBox": {
+        "x": 1370,
+        "y": 47,
+        "width": 268,
+        "height": 287
+      },
+      "alphaArea": 38834
+    },
+    {
+      "id": "stage04-stone-stove",
+      "stage": 4,
+      "stageTitle": "steaming-and-washing",
+      "indexInStage": 2,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage04-stone-stove.png",
+      "width": 262,
+      "height": 268,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 214,
+        "height": 220
+      },
+      "sourceStageSheet": "source-stage-sheets/stage4.png",
+      "sourceBox": {
+        "x": 1138,
+        "y": 118,
+        "width": 214,
+        "height": 220
+      },
+      "alphaArea": 41576
+    },
+    {
+      "id": "stage04-steam-cloud",
+      "stage": 4,
+      "stageTitle": "steaming-and-washing",
+      "indexInStage": 3,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage04-steam-cloud.png",
+      "width": 192,
+      "height": 297,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 144,
+        "height": 249
+      },
+      "sourceStageSheet": "source-stage-sheets/stage4.png",
+      "sourceBox": {
+        "x": 1493,
+        "y": 370,
+        "width": 144,
+        "height": 249
+      },
+      "alphaArea": 22786
+    },
+    {
+      "id": "stage04-fire-flame",
+      "stage": 4,
+      "stageTitle": "steaming-and-washing",
+      "indexInStage": 4,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage04-fire-flame.png",
+      "width": 222,
+      "height": 262,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 174,
+        "height": 214
+      },
+      "sourceStageSheet": "source-stage-sheets/stage4.png",
+      "sourceBox": {
+        "x": 1124,
+        "y": 392,
+        "width": 174,
+        "height": 214
+      },
+      "alphaArea": 15148
+    },
+    {
+      "id": "stage04-bubble-small",
+      "stage": 4,
+      "stageTitle": "steaming-and-washing",
+      "indexInStage": 5,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage04-bubble-small.png",
+      "width": 100,
+      "height": 100,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 52,
+        "height": 52
+      },
+      "sourceStageSheet": "source-stage-sheets/stage4.png",
+      "sourceBox": {
+        "x": 1381,
+        "y": 426,
+        "width": 52,
+        "height": 52
+      },
+      "alphaArea": 1046
+    },
+    {
+      "id": "stage04-bubble-large",
+      "stage": 4,
+      "stageTitle": "steaming-and-washing",
+      "indexInStage": 6,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage04-bubble-large.png",
+      "width": 111,
+      "height": 110,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 63,
+        "height": 62
+      },
+      "sourceStageSheet": "source-stage-sheets/stage4.png",
+      "sourceBox": {
+        "x": 1338,
+        "y": 488,
+        "width": 63,
+        "height": 62
+      },
+      "alphaArea": 3087
+    },
+    {
+      "id": "stage04-boiled-fiber-pot",
+      "stage": 4,
+      "stageTitle": "steaming-and-washing",
+      "indexInStage": 7,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage04-boiled-fiber-pot.png",
+      "width": 447,
+      "height": 323,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 399,
+        "height": 275
+      },
+      "sourceStageSheet": "source-stage-sheets/stage4.png",
+      "sourceBox": {
+        "x": 369,
+        "y": 650,
+        "width": 399,
+        "height": 275
+      },
+      "alphaArea": 94923
+    },
+    {
+      "id": "stage04-softened-fiber-basket",
+      "stage": 4,
+      "stageTitle": "steaming-and-washing",
+      "indexInStage": 8,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage04-softened-fiber-basket.png",
+      "width": 391,
+      "height": 305,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 343,
+        "height": 257
+      },
+      "sourceStageSheet": "source-stage-sheets/stage4.png",
+      "sourceBox": {
+        "x": 9,
+        "y": 667,
+        "width": 343,
+        "height": 257
+      },
+      "alphaArea": 68642
+    },
+    {
+      "id": "stage04-impurity-twigs",
+      "stage": 4,
+      "stageTitle": "steaming-and-washing",
+      "indexInStage": 9,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage04-impurity-twigs.png",
+      "width": 247,
+      "height": 210,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 199,
+        "height": 162
+      },
+      "sourceStageSheet": "source-stage-sheets/stage4.png",
+      "sourceBox": {
+        "x": 795,
+        "y": 704,
+        "width": 199,
+        "height": 162
+      },
+      "alphaArea": 18580
+    },
+    {
+      "id": "stage04-bark-chips",
+      "stage": 4,
+      "stageTitle": "steaming-and-washing",
+      "indexInStage": 10,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage04-bark-chips.png",
+      "width": 229,
+      "height": 189,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 181,
+        "height": 141
+      },
+      "sourceStageSheet": "source-stage-sheets/stage4.png",
+      "sourceBox": {
+        "x": 1024,
+        "y": 712,
+        "width": 181,
+        "height": 141
+      },
+      "alphaArea": 15879
+    },
+    {
+      "id": "stage04-sand-pile",
+      "stage": 4,
+      "stageTitle": "steaming-and-washing",
+      "indexInStage": 11,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage04-sand-pile.png",
+      "width": 218,
+      "height": 171,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 170,
+        "height": 123
+      },
+      "sourceStageSheet": "source-stage-sheets/stage4.png",
+      "sourceBox": {
+        "x": 1460,
+        "y": 731,
+        "width": 170,
+        "height": 123
+      },
+      "alphaArea": 14793
+    },
+    {
+      "id": "stage04-stone-grit",
+      "stage": 4,
+      "stageTitle": "steaming-and-washing",
+      "indexInStage": 12,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage04-stone-grit.png",
+      "width": 212,
+      "height": 184,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 164,
+        "height": 136
+      },
+      "sourceStageSheet": "source-stage-sheets/stage4.png",
+      "sourceBox": {
+        "x": 1251,
+        "y": 735,
+        "width": 164,
+        "height": 136
+      },
+      "alphaArea": 13609
+    },
+    {
+      "id": "stage05-wooden-mallet",
+      "stage": 5,
+      "stageTitle": "pulping",
+      "indexInStage": 1,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage05-wooden-mallet.png",
+      "width": 243,
+      "height": 253,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 195,
+        "height": 205
+      },
+      "sourceStageSheet": "source-stage-sheets/stage5.png",
+      "sourceBox": {
+        "x": 1167,
+        "y": 68,
+        "width": 195,
+        "height": 205
+      },
+      "alphaArea": 12404
+    },
+    {
+      "id": "stage05-stone-mortar",
+      "stage": 5,
+      "stageTitle": "pulping",
+      "indexInStage": 2,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage05-stone-mortar.png",
+      "width": 269,
+      "height": 224,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 221,
+        "height": 176
+      },
+      "sourceStageSheet": "source-stage-sheets/stage5.png",
+      "sourceBox": {
+        "x": 1392,
+        "y": 73,
+        "width": 221,
+        "height": 176
+      },
+      "alphaArea": 30851
+    },
+    {
+      "id": "stage05-fiber-block",
+      "stage": 5,
+      "stageTitle": "pulping",
+      "indexInStage": 3,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage05-fiber-block.png",
+      "width": 275,
+      "height": 278,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 227,
+        "height": 230
+      },
+      "sourceStageSheet": "source-stage-sheets/stage5.png",
+      "sourceBox": {
+        "x": 1148,
+        "y": 343,
+        "width": 227,
+        "height": 230
+      },
+      "alphaArea": 35292
+    },
+    {
+      "id": "stage05-crushed-fiber-block",
+      "stage": 5,
+      "stageTitle": "pulping",
+      "indexInStage": 4,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage05-crushed-fiber-block.png",
+      "width": 251,
+      "height": 224,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 203,
+        "height": 176
+      },
+      "sourceStageSheet": "source-stage-sheets/stage5.png",
+      "sourceBox": {
+        "x": 1402,
+        "y": 368,
+        "width": 203,
+        "height": 176
+      },
+      "alphaArea": 23999
+    },
+    {
+      "id": "stage05-pulp-vat",
+      "stage": 5,
+      "stageTitle": "pulping",
+      "indexInStage": 5,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage05-pulp-vat.png",
+      "width": 479,
+      "height": 356,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 431,
+        "height": 308
+      },
+      "sourceStageSheet": "source-stage-sheets/stage5.png",
+      "sourceBox": {
+        "x": 1175,
+        "y": 593,
+        "width": 431,
+        "height": 308
+      },
+      "alphaArea": 76735
+    },
+    {
+      "id": "stage05-floating-fibers-a",
+      "stage": 5,
+      "stageTitle": "pulping",
+      "indexInStage": 6,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage05-floating-fibers-a.png",
+      "width": 184,
+      "height": 228,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 136,
+        "height": 180
+      },
+      "sourceStageSheet": "source-stage-sheets/stage5.png",
+      "sourceBox": {
+        "x": 47,
+        "y": 708,
+        "width": 136,
+        "height": 180
+      },
+      "alphaArea": 12101
+    },
+    {
+      "id": "stage05-floating-fibers-b",
+      "stage": 5,
+      "stageTitle": "pulping",
+      "indexInStage": 7,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage05-floating-fibers-b.png",
+      "width": 231,
+      "height": 204,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 183,
+        "height": 156
+      },
+      "sourceStageSheet": "source-stage-sheets/stage5.png",
+      "sourceBox": {
+        "x": 211,
+        "y": 716,
+        "width": 183,
+        "height": 156
+      },
+      "alphaArea": 5777
+    },
+    {
+      "id": "stage05-pulp-fragments",
+      "stage": 5,
+      "stageTitle": "pulping",
+      "indexInStage": 8,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage05-pulp-fragments.png",
+      "width": 206,
+      "height": 154,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 158,
+        "height": 106
+      },
+      "sourceStageSheet": "source-stage-sheets/stage5.png",
+      "sourceBox": {
+        "x": 418,
+        "y": 766,
+        "width": 158,
+        "height": 106
+      },
+      "alphaArea": 5222
+    },
+    {
+      "id": "stage05-water-splash",
+      "stage": 5,
+      "stageTitle": "pulping",
+      "indexInStage": 9,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage05-water-splash.png",
+      "width": 216,
+      "height": 145,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 168,
+        "height": 97
+      },
+      "sourceStageSheet": "source-stage-sheets/stage5.png",
+      "sourceBox": {
+        "x": 785,
+        "y": 786,
+        "width": 168,
+        "height": 97
+      },
+      "alphaArea": 7915
+    },
+    {
+      "id": "stage06-water-vat-top",
+      "stage": 6,
+      "stageTitle": "sheet-forming",
+      "indexInStage": 1,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage06-water-vat-top.png",
+      "width": 484,
+      "height": 279,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 436,
+        "height": 231
+      },
+      "sourceStageSheet": "source-stage-sheets/stage6.png",
+      "sourceBox": {
+        "x": 1171,
+        "y": 46,
+        "width": 436,
+        "height": 231
+      },
+      "alphaArea": 63842
+    },
+    {
+      "id": "stage06-bamboo-screen-front",
+      "stage": 6,
+      "stageTitle": "sheet-forming",
+      "indexInStage": 2,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage06-bamboo-screen-front.png",
+      "width": 231,
+      "height": 300,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 183,
+        "height": 252
+      },
+      "sourceStageSheet": "source-stage-sheets/stage6.png",
+      "sourceBox": {
+        "x": 1137,
+        "y": 279,
+        "width": 183,
+        "height": 252
+      },
+      "alphaArea": 34823
+    },
+    {
+      "id": "stage06-bamboo-screen-tilted",
+      "stage": 6,
+      "stageTitle": "sheet-forming",
+      "indexInStage": 3,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage06-bamboo-screen-tilted.png",
+      "width": 293,
+      "height": 324,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 245,
+        "height": 276
+      },
+      "sourceStageSheet": "source-stage-sheets/stage6.png",
+      "sourceBox": {
+        "x": 1365,
+        "y": 289,
+        "width": 245,
+        "height": 276
+      },
+      "alphaArea": 37088
+    },
+    {
+      "id": "stage06-water-wash",
+      "stage": 6,
+      "stageTitle": "sheet-forming",
+      "indexInStage": 4,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage06-water-wash.png",
+      "width": 270,
+      "height": 190,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 222,
+        "height": 142
+      },
+      "sourceStageSheet": "source-stage-sheets/stage6.png",
+      "sourceBox": {
+        "x": 1143,
+        "y": 556,
+        "width": 222,
+        "height": 142
+      },
+      "alphaArea": 22427
+    },
+    {
+      "id": "stage06-water-ripple-large",
+      "stage": 6,
+      "stageTitle": "sheet-forming",
+      "indexInStage": 5,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage06-water-ripple-large.png",
+      "width": 322,
+      "height": 148,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 274,
+        "height": 100
+      },
+      "sourceStageSheet": "source-stage-sheets/stage6.png",
+      "sourceBox": {
+        "x": 1381,
+        "y": 587,
+        "width": 274,
+        "height": 100
+      },
+      "alphaArea": 21417
+    },
+    {
+      "id": "stage06-wet-fiber-mat-on-frame",
+      "stage": 6,
+      "stageTitle": "sheet-forming",
+      "indexInStage": 6,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage06-wet-fiber-mat-on-frame.png",
+      "width": 279,
+      "height": 217,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 231,
+        "height": 169
+      },
+      "sourceStageSheet": "source-stage-sheets/stage6.png",
+      "sourceBox": {
+        "x": 414,
+        "y": 722,
+        "width": 231,
+        "height": 169
+      },
+      "alphaArea": 28047
+    },
+    {
+      "id": "stage06-wet-paper-sheet",
+      "stage": 6,
+      "stageTitle": "sheet-forming",
+      "indexInStage": 7,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage06-wet-paper-sheet.png",
+      "width": 311,
+      "height": 212,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 263,
+        "height": 164
+      },
+      "sourceStageSheet": "source-stage-sheets/stage6.png",
+      "sourceBox": {
+        "x": 697,
+        "y": 730,
+        "width": 263,
+        "height": 164
+      },
+      "alphaArea": 36588
+    },
+    {
+      "id": "stage06-water-ripple-small",
+      "stage": 6,
+      "stageTitle": "sheet-forming",
+      "indexInStage": 8,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage06-water-ripple-small.png",
+      "width": 257,
+      "height": 149,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 209,
+        "height": 101
+      },
+      "sourceStageSheet": "source-stage-sheets/stage6.png",
+      "sourceBox": {
+        "x": 1158,
+        "y": 767,
+        "width": 209,
+        "height": 101
+      },
+      "alphaArea": 16937
+    },
+    {
+      "id": "stage06-water-splash-ripple",
+      "stage": 6,
+      "stageTitle": "sheet-forming",
+      "indexInStage": 9,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage06-water-splash-ripple.png",
+      "width": 301,
+      "height": 144,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 253,
+        "height": 96
+      },
+      "sourceStageSheet": "source-stage-sheets/stage6.png",
+      "sourceBox": {
+        "x": 1392,
+        "y": 773,
+        "width": 253,
+        "height": 96
+      },
+      "alphaArea": 18064
+    },
+    {
+      "id": "stage06-water-drops-left",
+      "stage": 6,
+      "stageTitle": "sheet-forming",
+      "indexInStage": 10,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage06-water-drops-left.png",
+      "width": 88,
+      "height": 109,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 40,
+        "height": 61
+      },
+      "sourceStageSheet": "source-stage-sheets/stage6.png",
+      "sourceBox": {
+        "x": 1017,
+        "y": 801,
+        "width": 40,
+        "height": 61
+      },
+      "alphaArea": 1669
+    },
+    {
+      "id": "stage06-floating-fiber-petals",
+      "stage": 6,
+      "stageTitle": "sheet-forming",
+      "indexInStage": 11,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage06-floating-fiber-petals.png",
+      "width": 101,
+      "height": 96,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 53,
+        "height": 48
+      },
+      "sourceStageSheet": "source-stage-sheets/stage6.png",
+      "sourceBox": {
+        "x": 224,
+        "y": 812,
+        "width": 53,
+        "height": 48
+      },
+      "alphaArea": 1033
+    },
+    {
+      "id": "stage06-water-drops-right",
+      "stage": 6,
+      "stageTitle": "sheet-forming",
+      "indexInStage": 12,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage06-water-drops-right.png",
+      "width": 85,
+      "height": 99,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 37,
+        "height": 51
+      },
+      "sourceStageSheet": "source-stage-sheets/stage6.png",
+      "sourceBox": {
+        "x": 1069,
+        "y": 835,
+        "width": 37,
+        "height": 51
+      },
+      "alphaArea": 1344
+    },
+    {
+      "id": "stage07-drying-wall-panel",
+      "stage": 7,
+      "stageTitle": "pressing-and-drying",
+      "indexInStage": 1,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage07-drying-wall-panel.png",
+      "width": 619,
+      "height": 232,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 571,
+        "height": 184
+      },
+      "sourceStageSheet": "source-stage-sheets/stage7.png",
+      "sourceBox": {
+        "x": 1087,
+        "y": 72,
+        "width": 571,
+        "height": 184
+      },
+      "alphaArea": 96181
+    },
+    {
+      "id": "stage07-bamboo-drying-rack",
+      "stage": 7,
+      "stageTitle": "pressing-and-drying",
+      "indexInStage": 2,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage07-bamboo-drying-rack.png",
+      "width": 570,
+      "height": 267,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 522,
+        "height": 219
+      },
+      "sourceStageSheet": "source-stage-sheets/stage7.png",
+      "sourceBox": {
+        "x": 1104,
+        "y": 310,
+        "width": 522,
+        "height": 219
+      },
+      "alphaArea": 26784
+    },
+    {
+      "id": "stage07-wet-paper-sheet",
+      "stage": 7,
+      "stageTitle": "pressing-and-drying",
+      "indexInStage": 3,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage07-wet-paper-sheet.png",
+      "width": 211,
+      "height": 332,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 163,
+        "height": 284
+      },
+      "sourceStageSheet": "source-stage-sheets/stage7.png",
+      "sourceBox": {
+        "x": 1089,
+        "y": 578,
+        "width": 163,
+        "height": 284
+      },
+      "alphaArea": 43746
+    },
+    {
+      "id": "stage07-half-dry-paper-sheet",
+      "stage": 7,
+      "stageTitle": "pressing-and-drying",
+      "indexInStage": 4,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage07-half-dry-paper-sheet.png",
+      "width": 208,
+      "height": 334,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 160,
+        "height": 286
+      },
+      "sourceStageSheet": "source-stage-sheets/stage7.png",
+      "sourceBox": {
+        "x": 1285,
+        "y": 578,
+        "width": 160,
+        "height": 286
+      },
+      "alphaArea": 43332
+    },
+    {
+      "id": "stage07-dry-paper-sheet",
+      "stage": 7,
+      "stageTitle": "pressing-and-drying",
+      "indexInStage": 5,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage07-dry-paper-sheet.png",
+      "width": 209,
+      "height": 334,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 161,
+        "height": 286
+      },
+      "sourceStageSheet": "source-stage-sheets/stage7.png",
+      "sourceBox": {
+        "x": 1481,
+        "y": 578,
+        "width": 161,
+        "height": 286
+      },
+      "alphaArea": 43051
+    },
+    {
+      "id": "stage07-sunlight-beam",
+      "stage": 7,
+      "stageTitle": "pressing-and-drying",
+      "indexInStage": 6,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage07-sunlight-beam.png",
+      "width": 354,
+      "height": 295,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 306,
+        "height": 247
+      },
+      "sourceStageSheet": "source-stage-sheets/stage7.png",
+      "sourceBox": {
+        "x": 42,
+        "y": 646,
+        "width": 306,
+        "height": 247
+      },
+      "alphaArea": 40455
+    },
+    {
+      "id": "stage07-wind-streaks-a",
+      "stage": 7,
+      "stageTitle": "pressing-and-drying",
+      "indexInStage": 7,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage07-wind-streaks-a.png",
+      "width": 270,
+      "height": 133,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 222,
+        "height": 85
+      },
+      "sourceStageSheet": "source-stage-sheets/stage7.png",
+      "sourceBox": {
+        "x": 775,
+        "y": 672,
+        "width": 222,
+        "height": 85
+      },
+      "alphaArea": 5578
+    },
+    {
+      "id": "stage07-steam-haze",
+      "stage": 7,
+      "stageTitle": "pressing-and-drying",
+      "indexInStage": 8,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage07-steam-haze.png",
+      "width": 348,
+      "height": 250,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 300,
+        "height": 202
+      },
+      "sourceStageSheet": "source-stage-sheets/stage7.png",
+      "sourceBox": {
+        "x": 385,
+        "y": 685,
+        "width": 300,
+        "height": 202
+      },
+      "alphaArea": 35943
+    },
+    {
+      "id": "stage07-wind-leaves-a",
+      "stage": 7,
+      "stageTitle": "pressing-and-drying",
+      "indexInStage": 9,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage07-wind-leaves-a.png",
+      "width": 215,
+      "height": 87,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 167,
+        "height": 39
+      },
+      "sourceStageSheet": "source-stage-sheets/stage7.png",
+      "sourceBox": {
+        "x": 861,
+        "y": 763,
+        "width": 167,
+        "height": 39
+      },
+      "alphaArea": 1796
+    },
+    {
+      "id": "stage07-wind-streaks-b",
+      "stage": 7,
+      "stageTitle": "pressing-and-drying",
+      "indexInStage": 10,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage07-wind-streaks-b.png",
+      "width": 212,
+      "height": 130,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 164,
+        "height": 82
+      },
+      "sourceStageSheet": "source-stage-sheets/stage7.png",
+      "sourceBox": {
+        "x": 789,
+        "y": 772,
+        "width": 164,
+        "height": 82
+      },
+      "alphaArea": 2883
+    },
+    {
+      "id": "stage07-wind-leaves-b",
+      "stage": 7,
+      "stageTitle": "pressing-and-drying",
+      "indexInStage": 11,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage07-wind-leaves-b.png",
+      "width": 194,
+      "height": 106,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 146,
+        "height": 58
+      },
+      "sourceStageSheet": "source-stage-sheets/stage7.png",
+      "sourceBox": {
+        "x": 808,
+        "y": 817,
+        "width": 146,
+        "height": 58
+      },
+      "alphaArea": 1841
+    },
+    {
+      "id": "stage08-single-finished-paper",
+      "stage": 8,
+      "stageTitle": "finishing-and-cutting",
+      "indexInStage": 1,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage08-single-finished-paper.png",
+      "width": 266,
+      "height": 318,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 218,
+        "height": 270
+      },
+      "sourceStageSheet": "source-stage-sheets/stage8.png",
+      "sourceBox": {
+        "x": 1040,
+        "y": 30,
+        "width": 218,
+        "height": 270
+      },
+      "alphaArea": 54499
+    },
+    {
+      "id": "stage08-stacked-finished-paper",
+      "stage": 8,
+      "stageTitle": "finishing-and-cutting",
+      "indexInStage": 2,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage08-stacked-finished-paper.png",
+      "width": 387,
+      "height": 271,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 339,
+        "height": 223
+      },
+      "sourceStageSheet": "source-stage-sheets/stage8.png",
+      "sourceBox": {
+        "x": 1292,
+        "y": 50,
+        "width": 339,
+        "height": 223
+      },
+      "alphaArea": 50392
+    },
+    {
+      "id": "stage08-paper-cutting-knife",
+      "stage": 8,
+      "stageTitle": "finishing-and-cutting",
+      "indexInStage": 3,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage08-paper-cutting-knife.png",
+      "width": 346,
+      "height": 167,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 298,
+        "height": 119
+      },
+      "sourceStageSheet": "source-stage-sheets/stage8.png",
+      "sourceBox": {
+        "x": 1126,
+        "y": 306,
+        "width": 298,
+        "height": 119
+      },
+      "alphaArea": 16477
+    },
+    {
+      "id": "stage08-process-icon-bamboo",
+      "stage": 8,
+      "stageTitle": "finishing-and-cutting",
+      "indexInStage": 4,
+      "type": "component",
+      "category": "icons",
+      "file": "icons/stage08-process-icon-bamboo.png",
+      "width": 169,
+      "height": 182,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 121,
+        "height": 134
+      },
+      "sourceStageSheet": "source-stage-sheets/stage8.png",
+      "sourceBox": {
+        "x": 1004,
+        "y": 452,
+        "width": 121,
+        "height": 134
+      },
+      "alphaArea": 12677
+    },
+    {
+      "id": "stage08-process-icon-soak",
+      "stage": 8,
+      "stageTitle": "finishing-and-cutting",
+      "indexInStage": 5,
+      "type": "component",
+      "category": "icons",
+      "file": "icons/stage08-process-icon-soak.png",
+      "width": 170,
+      "height": 181,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 122,
+        "height": 133
+      },
+      "sourceStageSheet": "source-stage-sheets/stage8.png",
+      "sourceBox": {
+        "x": 1401,
+        "y": 455,
+        "width": 122,
+        "height": 133
+      },
+      "alphaArea": 12300
+    },
+    {
+      "id": "stage08-process-icon-forming",
+      "stage": 8,
+      "stageTitle": "finishing-and-cutting",
+      "indexInStage": 6,
+      "type": "component",
+      "category": "icons",
+      "file": "icons/stage08-process-icon-forming.png",
+      "width": 161,
+      "height": 180,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 113,
+        "height": 132
+      },
+      "sourceStageSheet": "source-stage-sheets/stage8.png",
+      "sourceBox": {
+        "x": 1533,
+        "y": 456,
+        "width": 113,
+        "height": 132
+      },
+      "alphaArea": 12259
+    },
+    {
+      "id": "stage08-process-icon-sun-dry",
+      "stage": 8,
+      "stageTitle": "finishing-and-cutting",
+      "indexInStage": 7,
+      "type": "component",
+      "category": "icons",
+      "file": "icons/stage08-process-icon-sun-dry.png",
+      "width": 165,
+      "height": 177,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 117,
+        "height": 129
+      },
+      "sourceStageSheet": "source-stage-sheets/stage8.png",
+      "sourceBox": {
+        "x": 1135,
+        "y": 458,
+        "width": 117,
+        "height": 129
+      },
+      "alphaArea": 11979
+    },
+    {
+      "id": "stage08-process-icon-stack",
+      "stage": 8,
+      "stageTitle": "finishing-and-cutting",
+      "indexInStage": 8,
+      "type": "component",
+      "category": "icons",
+      "file": "icons/stage08-process-icon-stack.png",
+      "width": 159,
+      "height": 177,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 111,
+        "height": 129
+      },
+      "sourceStageSheet": "source-stage-sheets/stage8.png",
+      "sourceBox": {
+        "x": 1270,
+        "y": 458,
+        "width": 111,
+        "height": 129
+      },
+      "alphaArea": 11605
+    },
+    {
+      "id": "stage08-fiber-weave-diagram",
+      "stage": 8,
+      "stageTitle": "finishing-and-cutting",
+      "indexInStage": 9,
+      "type": "component",
+      "category": "icons",
+      "file": "icons/stage08-fiber-weave-diagram.png",
+      "width": 866,
+      "height": 336,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 818,
+        "height": 288
+      },
+      "sourceStageSheet": "source-stage-sheets/stage8.png",
+      "sourceBox": {
+        "x": 804,
+        "y": 623,
+        "width": 818,
+        "height": 288
+      },
+      "alphaArea": 235235
+    },
+    {
+      "id": "stage08-large-wooden-table",
+      "stage": 8,
+      "stageTitle": "finishing-and-cutting",
+      "indexInStage": 10,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage08-large-wooden-table.png",
+      "width": 788,
+      "height": 251,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 740,
+        "height": 203
+      },
+      "sourceStageSheet": "source-stage-sheets/stage8.png",
+      "sourceBox": {
+        "x": 28,
+        "y": 665,
+        "width": 740,
+        "height": 203
+      },
+      "alphaArea": 120966
+    },
+    {
+      "id": "stage09-waste-paper-pile",
+      "stage": 9,
+      "stageTitle": "modern-recycling",
+      "indexInStage": 1,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage09-waste-paper-pile.png",
+      "width": 270,
+      "height": 200,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 222,
+        "height": 152
+      },
+      "sourceStageSheet": "source-stage-sheets/stage9.png",
+      "sourceBox": {
+        "x": 1161,
+        "y": 56,
+        "width": 222,
+        "height": 152
+      },
+      "alphaArea": 23684
+    },
+    {
+      "id": "stage09-shredded-paper-pile",
+      "stage": 9,
+      "stageTitle": "modern-recycling",
+      "indexInStage": 2,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage09-shredded-paper-pile.png",
+      "width": 275,
+      "height": 199,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 227,
+        "height": 151
+      },
+      "sourceStageSheet": "source-stage-sheets/stage9.png",
+      "sourceBox": {
+        "x": 1408,
+        "y": 57,
+        "width": 227,
+        "height": 151
+      },
+      "alphaArea": 20770
+    },
+    {
+      "id": "stage09-recycle-bin",
+      "stage": 9,
+      "stageTitle": "modern-recycling",
+      "indexInStage": 3,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage09-recycle-bin.png",
+      "width": 195,
+      "height": 242,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 147,
+        "height": 194
+      },
+      "sourceStageSheet": "source-stage-sheets/stage9.png",
+      "sourceBox": {
+        "x": 1175,
+        "y": 265,
+        "width": 147,
+        "height": 194
+      },
+      "alphaArea": 21468
+    },
+    {
+      "id": "stage09-recycled-paper-stack-clean",
+      "stage": 9,
+      "stageTitle": "modern-recycling",
+      "indexInStage": 4,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage09-recycled-paper-stack-clean.png",
+      "width": 213,
+      "height": 214,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 165,
+        "height": 166
+      },
+      "sourceStageSheet": "source-stage-sheets/stage9.png",
+      "sourceBox": {
+        "x": 1329,
+        "y": 284,
+        "width": 165,
+        "height": 166
+      },
+      "alphaArea": 18712
+    },
+    {
+      "id": "stage09-recycled-paper-stack-speckled",
+      "stage": 9,
+      "stageTitle": "modern-recycling",
+      "indexInStage": 5,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage09-recycled-paper-stack-speckled.png",
+      "width": 217,
+      "height": 225,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 169,
+        "height": 177
+      },
+      "sourceStageSheet": "source-stage-sheets/stage9.png",
+      "sourceBox": {
+        "x": 1491,
+        "y": 284,
+        "width": 169,
+        "height": 177
+      },
+      "alphaArea": 21817
+    },
+    {
+      "id": "stage09-water-filter-machine",
+      "stage": 9,
+      "stageTitle": "modern-recycling",
+      "indexInStage": 6,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage09-water-filter-machine.png",
+      "width": 280,
+      "height": 265,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 232,
+        "height": 217
+      },
+      "sourceStageSheet": "source-stage-sheets/stage9.png",
+      "sourceBox": {
+        "x": 1423,
+        "y": 508,
+        "width": 232,
+        "height": 217
+      },
+      "alphaArea": 39266
+    },
+    {
+      "id": "stage09-water-treatment-pond",
+      "stage": 9,
+      "stageTitle": "modern-recycling",
+      "indexInStage": 7,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage09-water-treatment-pond.png",
+      "width": 365,
+      "height": 244,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 317,
+        "height": 196
+      },
+      "sourceStageSheet": "source-stage-sheets/stage9.png",
+      "sourceBox": {
+        "x": 1088,
+        "y": 510,
+        "width": 317,
+        "height": 196
+      },
+      "alphaArea": 38296
+    },
+    {
+      "id": "stage09-greenhouse-paper-line",
+      "stage": 9,
+      "stageTitle": "modern-recycling",
+      "indexInStage": 8,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage09-greenhouse-paper-line.png",
+      "width": 525,
+      "height": 298,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 477,
+        "height": 250
+      },
+      "sourceStageSheet": "source-stage-sheets/stage9.png",
+      "sourceBox": {
+        "x": 38,
+        "y": 650,
+        "width": 477,
+        "height": 250
+      },
+      "alphaArea": 83103
+    },
+    {
+      "id": "stage09-robotic-arm",
+      "stage": 9,
+      "stageTitle": "modern-recycling",
+      "indexInStage": 9,
+      "type": "component",
+      "category": "tools",
+      "file": "tools/stage09-robotic-arm.png",
+      "width": 256,
+      "height": 286,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 208,
+        "height": 238
+      },
+      "sourceStageSheet": "source-stage-sheets/stage9.png",
+      "sourceBox": {
+        "x": 598,
+        "y": 651,
+        "width": 208,
+        "height": 238
+      },
+      "alphaArea": 24333
+    },
+    {
+      "id": "stage09-control-panel",
+      "stage": 9,
+      "stageTitle": "modern-recycling",
+      "indexInStage": 10,
+      "type": "component",
+      "category": "icons",
+      "file": "icons/stage09-control-panel.png",
+      "width": 337,
+      "height": 194,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 289,
+        "height": 146
+      },
+      "sourceStageSheet": "source-stage-sheets/stage9.png",
+      "sourceBox": {
+        "x": 1357,
+        "y": 757,
+        "width": 289,
+        "height": 146
+      },
+      "alphaArea": 39545
+    },
+    {
+      "id": "stage09-sensor-leaf",
+      "stage": 9,
+      "stageTitle": "modern-recycling",
+      "indexInStage": 11,
+      "type": "component",
+      "category": "icons",
+      "file": "icons/stage09-sensor-leaf.png",
+      "width": 145,
+      "height": 150,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 97,
+        "height": 102
+      },
+      "sourceStageSheet": "source-stage-sheets/stage9.png",
+      "sourceBox": {
+        "x": 968,
+        "y": 762,
+        "width": 97,
+        "height": 102
+      },
+      "alphaArea": 7777
+    },
+    {
+      "id": "stage09-sensor-thermometer",
+      "stage": 9,
+      "stageTitle": "modern-recycling",
+      "indexInStage": 12,
+      "type": "component",
+      "category": "icons",
+      "file": "icons/stage09-sensor-thermometer.png",
+      "width": 145,
+      "height": 150,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 97,
+        "height": 102
+      },
+      "sourceStageSheet": "source-stage-sheets/stage9.png",
+      "sourceBox": {
+        "x": 1096,
+        "y": 762,
+        "width": 97,
+        "height": 102
+      },
+      "alphaArea": 7852
+    },
+    {
+      "id": "stage09-sensor-wifi",
+      "stage": 9,
+      "stageTitle": "modern-recycling",
+      "indexInStage": 13,
+      "type": "component",
+      "category": "icons",
+      "file": "icons/stage09-sensor-wifi.png",
+      "width": 144,
+      "height": 149,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 96,
+        "height": 101
+      },
+      "sourceStageSheet": "source-stage-sheets/stage9.png",
+      "sourceBox": {
+        "x": 1226,
+        "y": 762,
+        "width": 96,
+        "height": 101
+      },
+      "alphaArea": 7734
+    },
+    {
+      "id": "stage09-sensor-water",
+      "stage": 9,
+      "stageTitle": "modern-recycling",
+      "indexInStage": 14,
+      "type": "component",
+      "category": "icons",
+      "file": "icons/stage09-sensor-water.png",
+      "width": 144,
+      "height": 147,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 96,
+        "height": 99
+      },
+      "sourceStageSheet": "source-stage-sheets/stage9.png",
+      "sourceBox": {
+        "x": 843,
+        "y": 764,
+        "width": 96,
+        "height": 99
+      },
+      "alphaArea": 7522
+    },
+    {
+      "id": "stage10-book-blue-bound",
+      "stage": 10,
+      "stageTitle": "paper-culture",
+      "indexInStage": 1,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage10-book-blue-bound.png",
+      "width": 182,
+      "height": 184,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 134,
+        "height": 136
+      },
+      "sourceStageSheet": "source-stage-sheets/stage10.png",
+      "sourceBox": {
+        "x": 1514,
+        "y": 55,
+        "width": 134,
+        "height": 136
+      },
+      "alphaArea": 12559
+    },
+    {
+      "id": "stage10-book-dark-blue",
+      "stage": 10,
+      "stageTitle": "paper-culture",
+      "indexInStage": 2,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage10-book-dark-blue.png",
+      "width": 184,
+      "height": 211,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 136,
+        "height": 163
+      },
+      "sourceStageSheet": "source-stage-sheets/stage10.png",
+      "sourceBox": {
+        "x": 1215,
+        "y": 57,
+        "width": 136,
+        "height": 163
+      },
+      "alphaArea": 14855
+    },
+    {
+      "id": "stage10-book-kraft-bound",
+      "stage": 10,
+      "stageTitle": "paper-culture",
+      "indexInStage": 3,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage10-book-kraft-bound.png",
+      "width": 183,
+      "height": 205,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 135,
+        "height": 157
+      },
+      "sourceStageSheet": "source-stage-sheets/stage10.png",
+      "sourceBox": {
+        "x": 1363,
+        "y": 59,
+        "width": 135,
+        "height": 157
+      },
+      "alphaArea": 15931
+    },
+    {
+      "id": "stage10-scroll-bamboo-painting",
+      "stage": 10,
+      "stageTitle": "paper-culture",
+      "indexInStage": 4,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage10-scroll-bamboo-painting.png",
+      "width": 144,
+      "height": 257,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 96,
+        "height": 209
+      },
+      "sourceStageSheet": "source-stage-sheets/stage10.png",
+      "sourceBox": {
+        "x": 1203,
+        "y": 256,
+        "width": 96,
+        "height": 209
+      },
+      "alphaArea": 16547
+    },
+    {
+      "id": "stage10-scroll-landscape",
+      "stage": 10,
+      "stageTitle": "paper-culture",
+      "indexInStage": 5,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage10-scroll-landscape.png",
+      "width": 165,
+      "height": 238,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 117,
+        "height": 190
+      },
+      "sourceStageSheet": "source-stage-sheets/stage10.png",
+      "sourceBox": {
+        "x": 1320,
+        "y": 264,
+        "width": 117,
+        "height": 190
+      },
+      "alphaArea": 18823
+    },
+    {
+      "id": "stage10-scroll-plum-blossom",
+      "stage": 10,
+      "stageTitle": "paper-culture",
+      "indexInStage": 6,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage10-scroll-plum-blossom.png",
+      "width": 145,
+      "height": 241,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 97,
+        "height": 193
+      },
+      "sourceStageSheet": "source-stage-sheets/stage10.png",
+      "sourceBox": {
+        "x": 1452,
+        "y": 265,
+        "width": 97,
+        "height": 193
+      },
+      "alphaArea": 15199
+    },
+    {
+      "id": "stage10-scroll-blank",
+      "stage": 10,
+      "stageTitle": "paper-culture",
+      "indexInStage": 7,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage10-scroll-blank.png",
+      "width": 150,
+      "height": 216,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 102,
+        "height": 168
+      },
+      "sourceStageSheet": "source-stage-sheets/stage10.png",
+      "sourceBox": {
+        "x": 1562,
+        "y": 274,
+        "width": 102,
+        "height": 168
+      },
+      "alphaArea": 14072
+    },
+    {
+      "id": "stage10-final-paper-stack",
+      "stage": 10,
+      "stageTitle": "paper-culture",
+      "indexInStage": 8,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage10-final-paper-stack.png",
+      "width": 211,
+      "height": 195,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 163,
+        "height": 147
+      },
+      "sourceStageSheet": "source-stage-sheets/stage10.png",
+      "sourceBox": {
+        "x": 1189,
+        "y": 493,
+        "width": 163,
+        "height": 147
+      },
+      "alphaArea": 18388
+    },
+    {
+      "id": "stage10-rolled-paper-scroll",
+      "stage": 10,
+      "stageTitle": "paper-culture",
+      "indexInStage": 9,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage10-rolled-paper-scroll.png",
+      "width": 194,
+      "height": 189,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 146,
+        "height": 141
+      },
+      "sourceStageSheet": "source-stage-sheets/stage10.png",
+      "sourceBox": {
+        "x": 1521,
+        "y": 502,
+        "width": 146,
+        "height": 141
+      },
+      "alphaArea": 12862
+    },
+    {
+      "id": "stage10-single-handmade-sheet",
+      "stage": 10,
+      "stageTitle": "paper-culture",
+      "indexInStage": 10,
+      "type": "component",
+      "category": "papers",
+      "file": "papers/stage10-single-handmade-sheet.png",
+      "width": 206,
+      "height": 183,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 158,
+        "height": 135
+      },
+      "sourceStageSheet": "source-stage-sheets/stage10.png",
+      "sourceBox": {
+        "x": 1358,
+        "y": 505,
+        "width": 158,
+        "height": 135
+      },
+      "alphaArea": 17746
+    },
+    {
+      "id": "stage10-ink-cloud",
+      "stage": 10,
+      "stageTitle": "paper-culture",
+      "indexInStage": 11,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage10-ink-cloud.png",
+      "width": 279,
+      "height": 287,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 231,
+        "height": 239
+      },
+      "sourceStageSheet": "source-stage-sheets/stage10.png",
+      "sourceBox": {
+        "x": 957,
+        "y": 673,
+        "width": 231,
+        "height": 239
+      },
+      "alphaArea": 36901
+    },
+    {
+      "id": "stage10-golden-light-sweep",
+      "stage": 10,
+      "stageTitle": "paper-culture",
+      "indexInStage": 12,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage10-golden-light-sweep.png",
+      "width": 996,
+      "height": 292,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 948,
+        "height": 244
+      },
+      "sourceStageSheet": "source-stage-sheets/stage10.png",
+      "sourceBox": {
+        "x": 0,
+        "y": 680,
+        "width": 948,
+        "height": 244
+      },
+      "alphaArea": 119516
+    },
+    {
+      "id": "stage10-blue-water-splash",
+      "stage": 10,
+      "stageTitle": "paper-culture",
+      "indexInStage": 13,
+      "type": "component",
+      "category": "effects",
+      "file": "effects/stage10-blue-water-splash.png",
+      "width": 264,
+      "height": 274,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 216,
+        "height": 226
+      },
+      "sourceStageSheet": "source-stage-sheets/stage10.png",
+      "sourceBox": {
+        "x": 1264,
+        "y": 684,
+        "width": 216,
+        "height": 226
+      },
+      "alphaArea": 33677
+    },
+    {
+      "id": "stage10-bamboo-decoration",
+      "stage": 10,
+      "stageTitle": "paper-culture",
+      "indexInStage": 14,
+      "type": "component",
+      "category": "props",
+      "file": "props/stage10-bamboo-decoration.png",
+      "width": 233,
+      "height": 298,
+      "contentBox": {
+        "x": 24,
+        "y": 24,
+        "width": 185,
+        "height": 250
+      },
+      "sourceStageSheet": "source-stage-sheets/stage10.png",
+      "sourceBox": {
+        "x": 1487,
+        "y": 691,
+        "width": 185,
+        "height": 250
+      },
+      "alphaArea": 17246
+    }
+  ]
+}

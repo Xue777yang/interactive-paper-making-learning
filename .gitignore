@@ -13,10 +13,10 @@ dist-server
 dist-ssr
 classpulse
 digital-english-tutor
-process-assets
-process-assets-fixed
-process-assets-v2
-process-assets*.zip
+/process-assets
+/process-assets-fixed
+/process-assets-v2
+/process-assets*.zip
 *.local
 *.tsbuildinfo
 .env
