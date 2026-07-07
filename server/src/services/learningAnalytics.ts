@@ -1,5 +1,6 @@
 import { prisma } from '../db.js'
 import { average, safeJsonParse } from '../utils.js'
+import type { VideoEvent } from '@prisma/client'
 import {
   buildTimelineHeatmap,
   calculateCompletionRate,
@@ -37,9 +38,9 @@ export async function buildTeacherDashboard() {
 async function buildTeacherDashboardFresh() {
   const [students, questionAnalytics, videoAnalytics, agentAnalytics] = await Promise.all([
     safeAnalyticsPart('students', () => buildStudentRows(), []),
-    safeAnalyticsPart('questions', () => buildQuestionAnalytics(), []),
-    safeAnalyticsPart('video', () => buildVideoAnalytics(), emptyVideoAnalytics()),
-    safeAnalyticsPart('agent', () => buildAgentAnalytics(), emptyAgentAnalytics()),
+    safeAnalyticsPart('questions', () => buildQuestionAnalytics(12), []),
+    safeAnalyticsPart('video', () => buildVideoAnalytics(undefined, undefined, { detail: 'summary' }), emptyVideoAnalytics()),
+    safeAnalyticsPart('agent', () => buildAgentAnalytics({ detail: 'summary' }), emptyAgentAnalytics()),
   ])
   const knowledgeAnalytics = await safeAnalyticsPart('knowledge', () => buildKnowledgeAnalytics(), [])
 
@@ -256,13 +257,14 @@ export async function buildStudentReport(studentId: string) {
   }
 }
 
-export async function buildQuestionAnalytics() {
+export async function buildQuestionAnalytics(limit?: number) {
   const questions = await prisma.question.findMany({
     include: {
       tags: { include: { knowledgeTag: true } },
       answerRecords: true,
     },
     orderBy: [{ active: 'desc' }, { difficulty: 'asc' }],
+    ...(limit ? { take: limit } : {}),
   })
 
   return questions.map((question) => {
@@ -328,7 +330,10 @@ export async function buildKnowledgeAnalytics() {
   })
 }
 
-export async function buildVideoAnalytics(videoId?: string, studentId?: string) {
+type AnalyticsDetail = 'full' | 'summary'
+
+export async function buildVideoAnalytics(videoId?: string, studentId?: string, options: { detail?: AnalyticsDetail } = {}) {
+  const detail = options.detail ?? 'full'
   const video =
     (videoId
       ? await prisma.videoResource.findUnique({
@@ -352,7 +357,10 @@ export async function buildVideoAnalytics(videoId?: string, studentId?: string) 
   const intervals = mergeWatchedIntervals(events)
   const completionRate = calculateCompletionRate(video.duration, intervals)
   const markerStats = calculateMarkerWatchStats(video.markers, intervals, events)
-  const studentSummaries = await buildVideoStudentSummaries(video.id, video.duration)
+  const studentSummaries =
+    detail === 'full'
+      ? await buildVideoStudentSummaries(video.id, video.duration)
+      : await buildVideoStudentSummariesFromEvents(events, video.duration, studentId)
 
   return {
     video: {
@@ -372,22 +380,28 @@ export async function buildVideoAnalytics(videoId?: string, studentId?: string) 
     skippedHotspots: calculateSkippedHotspots(events, video.markers).slice(0, 8),
     markerStats,
     studentSummaries,
-    performanceLinks: await buildVideoAnswerLinks(video.markers),
+    performanceLinks: detail === 'full' ? await buildVideoAnswerLinks(video.markers) : [],
   }
 }
 
-export async function buildAgentAnalytics() {
+export async function buildAgentAnalytics(options: { detail?: AnalyticsDetail } = {}) {
+  const detail = options.detail ?? 'full'
   const messages = await prisma.agentMessage.findMany({
     where: { role: 'user' },
     include: { user: true, emotionAnalysis: true },
     orderBy: { createdAt: 'desc' },
   })
   const emotions = await prisma.emotionAnalysis.findMany({ include: { user: true }, orderBy: { createdAt: 'asc' } })
-  const conversations = await prisma.agentConversation.findMany({
-    include: { user: true, messages: { orderBy: { createdAt: 'asc' } } },
-    orderBy: { updatedAt: 'desc' },
-    take: 20,
-  })
+  const conversations =
+    detail === 'full'
+      ? await prisma.agentConversation.findMany({
+          include: { user: true, messages: { orderBy: { createdAt: 'asc' } } },
+          orderBy: { updatedAt: 'desc' },
+          take: 20,
+        })
+      : []
+  const conversationCount =
+    detail === 'full' ? conversations.length : await prisma.agentConversation.count()
   const students = await prisma.user.findMany({ where: { role: 'student' } })
 
   const distribution = emotions.reduce<Record<string, number>>((record, emotion) => {
@@ -412,20 +426,23 @@ export async function buildAgentAnalytics() {
     .sort((left, right) => right.attentionCount - left.attentionCount)
 
   return {
-    totalConversations: conversations.length,
+    totalConversations: conversationCount,
     totalUserMessages: messages.length,
     averageQuestionsPerStudent: students.length ? messages.length / students.length : 0,
     keywords,
     emotionDistribution: distribution,
-    emotionTrend: emotions.map((emotion) => ({
-      emotionLabel: emotion.emotionLabel,
-      valence: emotion.valence,
-      arousal: emotion.arousal,
-      riskLevel: emotion.riskLevel,
-      summary: emotion.summary,
-      studentName: emotion.user.displayName,
-      createdAt: emotion.createdAt,
-    })),
+    emotionTrend:
+      detail === 'full'
+        ? emotions.map((emotion) => ({
+            emotionLabel: emotion.emotionLabel,
+            valence: emotion.valence,
+            arousal: emotion.arousal,
+            riskLevel: emotion.riskLevel,
+            summary: emotion.summary,
+            studentName: emotion.user.displayName,
+            createdAt: emotion.createdAt,
+          }))
+        : [],
     studentAttention,
     conversations: conversations.map((conversation) => ({
       id: conversation.id,
@@ -456,6 +473,39 @@ async function buildVideoStudentSummaries(videoId: string, duration: number) {
       lastPosition: student.videoEvents.at(-1)?.videoTime ?? 0,
     }
   })
+}
+
+async function buildVideoStudentSummariesFromEvents(events: VideoEvent[], duration: number, studentId?: string) {
+  const grouped = new Map<string, VideoEvent[]>()
+  for (const event of events) {
+    grouped.set(event.userId, [...(grouped.get(event.userId) ?? []), event])
+  }
+
+  const summaries = [...grouped.entries()].map(([userId, userEvents]) => {
+    const intervals = mergeWatchedIntervals(userEvents)
+    return {
+      studentId: userId,
+      displayName: '',
+      totalWatchTimeMs: calculateTotalWatchTime(userEvents),
+      effectiveWatchTimeMs: calculateEffectiveWatchTime(userEvents),
+      completionRate: calculateCompletionRate(duration, intervals),
+      lastPosition: userEvents.at(-1)?.videoTime ?? 0,
+    }
+  })
+
+  const expectedCount = studentId ? 1 : await prisma.user.count({ where: { role: 'student' } })
+  for (let index = summaries.length; index < expectedCount; index += 1) {
+    summaries.push({
+      studentId: `empty-${index}`,
+      displayName: '',
+      totalWatchTimeMs: 0,
+      effectiveWatchTimeMs: 0,
+      completionRate: 0,
+      lastPosition: 0,
+    })
+  }
+
+  return summaries
 }
 
 async function buildVideoAnswerLinks(markers: Array<{ knowledgeTagId: string; label: string }>) {

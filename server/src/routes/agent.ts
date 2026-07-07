@@ -19,6 +19,18 @@ type AgentQuestion = Prisma.QuestionGetPayload<{ include: { tags: { include: { k
 
 agentRouter.use(authenticate)
 
+agentRouter.get(
+  '/status',
+  asyncHandler(async (_req, res) => {
+    const config = getDeepSeekRuntimeConfig()
+    res.json({
+      mode: config.configured ? 'deepseek' : 'local',
+      providerStatus: config.configured ? 'deepseek_configured' : 'deepseek_missing_key',
+      model: config.model,
+    })
+  }),
+)
+
 agentRouter.post(
   '/chat',
   asyncHandler(async (req, res) => {

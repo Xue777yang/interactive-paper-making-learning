@@ -19,6 +19,7 @@ import { quizRouter } from './routes/quiz.js'
 import { teacherAnalyticsRouter } from './routes/teacherAnalytics.js'
 import { videoAnalyticsRouter, videoEventsRouter } from './routes/videoEvents.js'
 import { videoMarkersRouter, videosRouter } from './routes/videos.js'
+import { buildTeacherDashboard } from './services/learningAnalytics.js'
 
 const app = express()
 const config = getServerConfig()
@@ -90,4 +91,11 @@ app.use((error: Error & { statusCode?: number }, _req: express.Request, res: exp
 
 app.listen(config.port, config.host, () => {
   console.log(`Paper-making learning API listening on ${config.host}:${config.port}`)
+  if (config.isProduction) {
+    setTimeout(() => {
+      void buildTeacherDashboard().catch((error) => {
+        console.error('Teacher dashboard warmup failed:', error instanceof Error ? error.message : error)
+      })
+    }, 2500)
+  }
 })

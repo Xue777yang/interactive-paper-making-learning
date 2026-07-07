@@ -23,6 +23,8 @@ type ChatMessage = {
   text: string
 }
 
+type AssistantMode = 'checking' | 'deepseek' | 'local'
+
 const initialMessages: ChatMessage[] = [
   {
     role: 'agent',
@@ -35,7 +37,7 @@ export function CaiLunAgent({ quizContext }: CaiLunAgentProps) {
   const [input, setInput] = useState('')
   const [messages, setMessages] = useState<ChatMessage[]>(initialMessages)
   const [conversationId, setConversationId] = useState<string | null>(null)
-  const [assistantMode, setAssistantMode] = useState<'deepseek' | 'local'>('local')
+  const [assistantMode, setAssistantMode] = useState<AssistantMode>('checking')
   const [avatarReady, setAvatarReady] = useState(Boolean(cailunChibiUrl))
   const [sending, setSending] = useState(false)
   const remainingHelp = Math.max(0, quizContext.helpLimit - quizContext.helpUsed)
@@ -44,6 +46,12 @@ export function CaiLunAgent({ quizContext }: CaiLunAgentProps) {
     const openAgent = () => setOpen(true)
     window.addEventListener('open-cailun-agent', openAgent)
     return () => window.removeEventListener('open-cailun-agent', openAgent)
+  }, [])
+
+  useEffect(() => {
+    apiFetch<{ mode: 'deepseek' | 'local' }>('/agent/status')
+      .then((response) => setAssistantMode(response.mode))
+      .catch(() => setAssistantMode('local'))
   }, [])
 
   function addAgentMessage(text: string) {
@@ -153,7 +161,7 @@ export function CaiLunAgent({ quizContext }: CaiLunAgentProps) {
             <div>
               <strong>蔡伦小助手</strong>
               <span>
-                {assistantMode === 'deepseek' ? 'DeepSeek Flash' : '本地知识库'} · 帮助 {remainingHelp} / {quizContext.helpLimit}
+                {getAssistantModeLabel(assistantMode)} · 帮助 {remainingHelp} / {quizContext.helpLimit}
               </span>
             </div>
             <button type="button" onClick={() => setOpen(false)} aria-label="收起蔡伦小助手">
@@ -193,6 +201,11 @@ export function CaiLunAgent({ quizContext }: CaiLunAgentProps) {
       </button>
     </aside>
   )
+}
+
+function getAssistantModeLabel(mode: AssistantMode) {
+  if (mode === 'checking') return '检测中'
+  return mode === 'deepseek' ? 'DeepSeek Flash' : '本地知识库'
 }
 
 function CaiLunAvatarImage({
