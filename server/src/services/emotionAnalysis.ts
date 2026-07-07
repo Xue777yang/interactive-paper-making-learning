@@ -1,4 +1,4 @@
-import { chatWithDeepSeek, hasDeepSeekConfig } from './deepseekClient.js'
+import { chatWithDeepSeek, formatDeepSeekError, getDeepSeekRuntimeConfig, hasDeepSeekConfig } from './deepseekClient.js'
 import { clamp, safeJsonParse } from '../utils.js'
 
 export type EmotionLabel = 'curious' | 'confused' | 'frustrated' | 'anxious' | 'bored' | 'confident' | 'neutral'
@@ -41,7 +41,9 @@ export async function analyzeLearningEmotion(text: string): Promise<EmotionAnaly
       ])
       const parsed = safeJsonParse<Partial<EmotionAnalysisResult>>(extractJson(result.content), {})
       return normalizeEmotionResult(parsed, text)
-    } catch {
+    } catch (error) {
+      const config = getDeepSeekRuntimeConfig()
+      console.error(`DeepSeek emotion analysis failed (${config.model} @ ${config.baseUrl}): ${formatDeepSeekError(error)}`)
       return localEmotionFallback(text)
     }
   }

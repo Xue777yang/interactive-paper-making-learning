@@ -8,6 +8,7 @@ export type DeepSeekMessage = {
 export type DeepSeekResult = {
   content: string
   mode: 'deepseek' | 'local'
+  model?: string
 }
 
 const DEFAULT_BASE_URL = 'https://api.deepseek.com'
@@ -17,12 +18,24 @@ export function hasDeepSeekConfig() {
   return Boolean(process.env.DEEPSEEK_API_KEY?.trim())
 }
 
+export function getDeepSeekRuntimeConfig() {
+  return {
+    configured: hasDeepSeekConfig(),
+    baseUrl: (process.env.DEEPSEEK_BASE_URL || DEFAULT_BASE_URL).replace(/\/$/, ''),
+    model: process.env.DEEPSEEK_MODEL || DEFAULT_MODEL,
+  }
+}
+
+export function formatDeepSeekError(error: unknown) {
+  if (error instanceof Error) return error.message
+  return String(error)
+}
+
 export async function chatWithDeepSeek(messages: DeepSeekMessage[]): Promise<DeepSeekResult> {
   const apiKey = process.env.DEEPSEEK_API_KEY?.trim()
   if (!apiKey) return { content: '', mode: 'local' }
 
-  const baseUrl = (process.env.DEEPSEEK_BASE_URL || DEFAULT_BASE_URL).replace(/\/$/, '')
-  const model = process.env.DEEPSEEK_MODEL || DEFAULT_MODEL
+  const { baseUrl, model } = getDeepSeekRuntimeConfig()
   const response = await fetch(`${baseUrl}/chat/completions`, {
     method: 'POST',
     headers: {
@@ -48,6 +61,7 @@ export async function chatWithDeepSeek(messages: DeepSeekMessage[]): Promise<Dee
   return {
     content: data.choices?.[0]?.message?.content?.trim() || '',
     mode: 'deepseek',
+    model,
   }
 }
 
@@ -60,4 +74,3 @@ export const cailunSystemPrompt = [
   '语言简洁、亲切、中文，不输出长篇无关内容。',
   '不要输出或保存任何 chain-of-thought，只给最终回答。',
 ].join('\n')
-

@@ -4,7 +4,13 @@ import { getAgentDailyLimitPerUser } from '../config/env.js'
 import { prisma } from '../db.js'
 import { authenticate, type AuthenticatedRequest } from '../middleware/auth.js'
 import { analyzeLearningEmotion } from '../services/emotionAnalysis.js'
-import { cailunSystemPrompt, chatWithDeepSeek, type DeepSeekMessage } from '../services/deepseekClient.js'
+import {
+  cailunSystemPrompt,
+  chatWithDeepSeek,
+  formatDeepSeekError,
+  getDeepSeekRuntimeConfig,
+  type DeepSeekMessage,
+} from '../services/deepseekClient.js'
 import { asyncHandler, toNumber } from '../utils.js'
 
 export const agentRouter = Router()
@@ -83,13 +89,21 @@ agentRouter.post(
       currentVideoTime: relatedVideoTime,
     })
 
+    const deepSeekConfig = getDeepSeekRuntimeConfig()
     let mode: 'deepseek' | 'local' = 'local'
+    let providerStatus: 'deepseek_ok' | 'deepseek_missing_key' | 'deepseek_error' = deepSeekConfig.configured
+      ? 'deepseek_error'
+      : 'deepseek_missing_key'
     let reply = ''
     try {
       const result = await chatWithDeepSeek(messages)
       mode = result.mode
+      providerStatus = result.mode === 'deepseek' ? 'deepseek_ok' : 'deepseek_missing_key'
       reply = result.content || localCailunReply(content, question, Boolean(req.body?.questionSubmitted), contextType)
-    } catch {
+    } catch (error) {
+      console.error(
+        `DeepSeek chat failed (${deepSeekConfig.model} @ ${deepSeekConfig.baseUrl}): ${formatDeepSeekError(error)}`,
+      )
       reply = localCailunReply(content, question, Boolean(req.body?.questionSubmitted), contextType)
     }
 
@@ -108,6 +122,7 @@ agentRouter.post(
       conversationId: conversation.id,
       reply,
       mode,
+      providerStatus,
       emotion,
       assistantMessageId: assistantMessage.id,
     })
