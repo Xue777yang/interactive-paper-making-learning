@@ -14,11 +14,13 @@ import {
 const PROCESS_STEP_COUNT = 10
 
 export async function buildTeacherDashboard() {
-  const students = await buildStudentRows()
-  const questionAnalytics = await buildQuestionAnalytics()
-  const knowledgeAnalytics = await buildKnowledgeAnalytics()
-  const videoAnalytics = await buildVideoAnalytics()
-  const agentAnalytics = await buildAgentAnalytics()
+  const [students, questionAnalytics, knowledgeAnalytics, videoAnalytics, agentAnalytics] = await Promise.all([
+    safeAnalyticsPart('students', buildStudentRows(), []),
+    safeAnalyticsPart('questions', buildQuestionAnalytics(), []),
+    safeAnalyticsPart('knowledge', buildKnowledgeAnalytics(), []),
+    safeAnalyticsPart('video', buildVideoAnalytics(), emptyVideoAnalytics()),
+    safeAnalyticsPart('agent', buildAgentAnalytics(), emptyAgentAnalytics()),
+  ])
 
   const completedQuizStudents = students.filter((student) => student.quizCompleted).length
   const overview = {
@@ -319,18 +321,7 @@ export async function buildVideoAnalytics(videoId?: string, studentId?: string) 
         })) ?? null
 
   if (!video) {
-    return {
-      video: null,
-      completionRate: 0,
-      averageWatchTimeMs: 0,
-      effectiveWatchTimeMs: 0,
-      heatmap: [],
-      replayHotspots: [],
-      skippedHotspots: [],
-      markerStats: [],
-      studentSummaries: [],
-      performanceLinks: [],
-    }
+    return emptyVideoAnalytics()
   }
 
   const events = await prisma.videoEvent.findMany({
@@ -599,4 +590,41 @@ function extractKeywords(texts: string[]) {
 
 export function parseMetadata<T>(value: string | null | undefined, fallback: T) {
   return safeJsonParse(value, fallback)
+}
+
+async function safeAnalyticsPart<T>(label: string, promise: Promise<T>, fallback: T): Promise<T> {
+  try {
+    return await promise
+  } catch (error) {
+    console.error(`Teacher dashboard ${label} analytics failed:`, error instanceof Error ? error.message : error)
+    return fallback
+  }
+}
+
+function emptyVideoAnalytics() {
+  return {
+    video: null,
+    completionRate: 0,
+    averageWatchTimeMs: 0,
+    effectiveWatchTimeMs: 0,
+    heatmap: [],
+    replayHotspots: [],
+    skippedHotspots: [],
+    markerStats: [],
+    studentSummaries: [],
+    performanceLinks: [],
+  }
+}
+
+function emptyAgentAnalytics() {
+  return {
+    totalConversations: 0,
+    totalUserMessages: 0,
+    averageQuestionsPerStudent: 0,
+    keywords: [],
+    emotionDistribution: {},
+    emotionTrend: [],
+    studentAttention: [],
+    conversations: [],
+  }
 }
