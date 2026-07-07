@@ -6,10 +6,23 @@ import { formatPercent } from '../../lib/utils'
 
 export function TeacherStudentsPage() {
   const [students, setStudents] = useState<TeacherStudentRow[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
 
   useEffect(() => {
-    apiFetch<{ students: TeacherStudentRow[] }>('/teacher/students').then((response) => setStudents(response.students))
+    loadStudents()
   }, [])
+
+  function loadStudents() {
+    setLoading(true)
+    setError('')
+    apiFetch<{ students: TeacherStudentRow[] }>('/teacher/students')
+      .then((response) => setStudents(response.students))
+      .catch((nextError: unknown) => {
+        setError(nextError instanceof Error ? nextError.message : '学生数据加载失败。')
+      })
+      .finally(() => setLoading(false))
+  }
 
   return (
     <section className="teacher-page">
@@ -45,8 +58,17 @@ export function TeacherStudentsPage() {
             </div>
           ))}
         </div>
+        {loading && <p className="empty-note">正在加载学生数据...</p>}
+        {!loading && !error && students.length === 0 && <p className="empty-note">暂无学生数据。</p>}
+        {error && (
+          <div className="empty-note">
+            <p>{error}</p>
+            <button className="ghost-button" type="button" onClick={loadStudents}>
+              重试
+            </button>
+          </div>
+        )}
       </article>
     </section>
   )
 }
-

@@ -51,10 +51,32 @@ const emotionText: Record<string, string> = {
 
 export function TeacherDashboardPage() {
   const [dashboard, setDashboard] = useState<Dashboard | null>(null)
+  const [error, setError] = useState('')
 
   useEffect(() => {
-    apiFetch<{ dashboard: Dashboard }>('/teacher/dashboard').then((response) => setDashboard(response.dashboard))
+    loadDashboard()
   }, [])
+
+  function loadDashboard() {
+    setError('')
+    apiFetch<{ dashboard: Dashboard }>('/teacher/dashboard')
+      .then((response) => setDashboard(response.dashboard))
+      .catch((nextError: unknown) => {
+        setError(nextError instanceof Error ? nextError.message : '教师看板加载失败。')
+      })
+  }
+
+  if (error) {
+    return (
+      <section className="paper-panel">
+        <h2>教师看板加载失败</h2>
+        <p>{error}</p>
+        <button className="primary-button" type="button" onClick={loadDashboard}>
+          重试
+        </button>
+      </section>
+    )
+  }
 
   if (!dashboard) return <section className="paper-panel">正在加载教师看板...</section>
 

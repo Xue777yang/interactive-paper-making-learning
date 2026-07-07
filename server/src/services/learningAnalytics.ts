@@ -14,13 +14,11 @@ import {
 const PROCESS_STEP_COUNT = 10
 
 export async function buildTeacherDashboard() {
-  const [students, questionAnalytics, knowledgeAnalytics, videoAnalytics, agentAnalytics] = await Promise.all([
-    buildStudentRows(),
-    buildQuestionAnalytics(),
-    buildKnowledgeAnalytics(),
-    buildVideoAnalytics(),
-    buildAgentAnalytics(),
-  ])
+  const students = await buildStudentRows()
+  const questionAnalytics = await buildQuestionAnalytics()
+  const knowledgeAnalytics = await buildKnowledgeAnalytics()
+  const videoAnalytics = await buildVideoAnalytics()
+  const agentAnalytics = await buildAgentAnalytics()
 
   const completedQuizStudents = students.filter((student) => student.quizCompleted).length
   const overview = {
@@ -367,20 +365,18 @@ export async function buildVideoAnalytics(videoId?: string, studentId?: string) 
 }
 
 export async function buildAgentAnalytics() {
-  const [messages, emotions, conversations, students] = await Promise.all([
-    prisma.agentMessage.findMany({
-      where: { role: 'user' },
-      include: { user: true, emotionAnalysis: true },
-      orderBy: { createdAt: 'desc' },
-    }),
-    prisma.emotionAnalysis.findMany({ include: { user: true }, orderBy: { createdAt: 'asc' } }),
-    prisma.agentConversation.findMany({
-      include: { user: true, messages: { orderBy: { createdAt: 'asc' } } },
-      orderBy: { updatedAt: 'desc' },
-      take: 20,
-    }),
-    prisma.user.findMany({ where: { role: 'student' } }),
-  ])
+  const messages = await prisma.agentMessage.findMany({
+    where: { role: 'user' },
+    include: { user: true, emotionAnalysis: true },
+    orderBy: { createdAt: 'desc' },
+  })
+  const emotions = await prisma.emotionAnalysis.findMany({ include: { user: true }, orderBy: { createdAt: 'asc' } })
+  const conversations = await prisma.agentConversation.findMany({
+    include: { user: true, messages: { orderBy: { createdAt: 'asc' } } },
+    orderBy: { updatedAt: 'desc' },
+    take: 20,
+  })
+  const students = await prisma.user.findMany({ where: { role: 'student' } })
 
   const distribution = emotions.reduce<Record<string, number>>((record, emotion) => {
     record[emotion.emotionLabel] = (record[emotion.emotionLabel] ?? 0) + 1
